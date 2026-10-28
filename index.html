@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Singular Invest · Consórcio de imóveis, veículos e pesados</title>
+<meta name="description" content="Consórcio sem juros, feito do seu jeito. Singular Invest, representante autorizado Embracon. Fale com a gente no WhatsApp.">
+<meta property="og:title" content="Singular Invest · Seu plano não é igual ao de ninguém">
+<meta property="og:description" content="Consórcio de imóvel, carro ou caminhão do tamanho do seu bolso. Sem juros.">
+<meta property="og:url" content="https://singularinvest.com.br">
+<meta name="theme-color" content="#0F1E33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'%3E%3Crect width='72' height='72' rx='16' fill='%23F5F3EE'/%3E%3Cg fill='%230F1E33' fill-opacity='.25'%3E%3Ccircle cx='16' cy='16' r='6'/%3E%3Ccircle cx='36' cy='16' r='6'/%3E%3Ccircle cx='16' cy='36' r='6'/%3E%3Ccircle cx='36' cy='36' r='6'/%3E%3Ccircle cx='56' cy='36' r='6'/%3E%3Ccircle cx='16' cy='56' r='6'/%3E%3Ccircle cx='36' cy='56' r='6'/%3E%3Ccircle cx='56' cy='56' r='6'/%3E%3C/g%3E%3Ccircle cx='56' cy='16' r='9' fill='%23C8962F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0F1E33; --navy-2:#26364F; --cream:#F5F3EE; --line:#E2DED5;
+    --muted:#5B6472; --body:#3E4757; --soft:#A9B3C2; --gold:#C8962F; --white:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--navy);font-family:'Sora',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--navy);text-decoration:none}
+  a:hover{color:var(--navy-2)}
+  .wrap{max-width:1200px;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem}
+  .eyebrow{margin:0 0 .8rem;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  h1,h2,h3{margin:0}
+  h2{font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:700;letter-spacing:-.03em;line-height:1.1}
+  .dot{display:inline-block;border-radius:50%;background:var(--gold);flex:none}
+
+  /* logo */
+  .logo{display:flex;align-items:center;gap:12px}
+  .word{display:flex;flex-direction:column}
+  .word b{font-weight:600;letter-spacing:-.03em;line-height:1}
+  .word small{font-weight:300;letter-spacing:.42em;text-transform:uppercase;color:var(--muted)}
+  .i{position:relative;display:inline-block}
+  .i::after{content:"";position:absolute;left:50%;top:.02em;width:.2em;height:.2em;margin-left:-.1em;border-radius:50%;background:var(--gold)}
+
+  /* nav */
+  header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(245,243,238,.94);backdrop-filter:blur(8px);z-index:10}
+  .nav{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;padding-top:1.1rem;padding-bottom:1.1rem}
+  .nav nav{display:flex;flex-wrap:wrap;gap:1.6rem;font-size:.95rem}
+  .btn-dark{display:flex;align-items:center;gap:10px;background:var(--navy);color:var(--cream);padding:.75rem 1.3rem;border-radius:999px;font-size:.95rem;font-weight:600}
+  .btn-dark:hover{color:var(--cream);background:var(--navy-2)}
+
+  /* hero */
+  .hero{display:flex;flex-wrap:wrap;gap:3.5rem;align-items:center;padding-top:5rem;padding-bottom:4.5rem}
+  .hero-text{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:1.6rem}
+  .hero-text .eyebrow{display:flex;align-items:center;gap:10px;margin:0}
+  h1{font-size:clamp(2.4rem,4.6vw,4.2rem);font-weight:700;letter-spacing:-.035em;line-height:1.05}
+  .lead{margin:0;font-size:1.2rem;line-height:1.6;color:var(--body);max-width:34rem}
+  .hint{margin:0;display:flex;align-items:center;gap:12px;font-weight:600}
+  .hero-grid-box{flex:1 1 360px;min-width:0;display:flex;justify-content:center}
+
+  /* dot grids */
+  .dots{width:100%;display:grid;gap:.4rem}
+  .dots .cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative}
+  .dots .p{width:32%;height:32%;border-radius:50%;background:var(--navy);opacity:.16}
+  .dots.dark .p{background:var(--cream);opacity:.18;width:30%;height:30%}
+  .ring{position:absolute;width:42%;height:42%;border-radius:50%;background:var(--gold);animation:pulse 1.8s ease-out infinite;pointer-events:none}
+  .ring.r2{animation-delay:.9s}
+  .cta-dot{position:relative;width:62%;height:62%;border-radius:50%;background:var(--gold);box-shadow:0 8px 24px rgba(200,150,47,.45);transition:transform .2s ease}
+  .cta-dot:hover,.cta-dot:focus-visible{transform:scale(1.12)}
+  .cta-dot:focus-visible{outline:3px solid var(--navy);outline-offset:4px}
+  .dots.dark .cta-dot:focus-visible{outline-color:var(--cream)}
+  @keyframes pulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(2.6);opacity:0}}
+  @media (prefers-reduced-motion:reduce){.ring{animation:none;opacity:0}}
+
+  /* faixa */
+  .band{background:var(--navy);color:var(--cream)}
+  .band .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;padding-top:2rem;padding-bottom:2rem}
+  .band p{margin:0;display:flex;align-items:center;gap:12px}
+
+  /* cards */
+  .section{padding-top:6rem;padding-bottom:4rem}
+  .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+  .card{background:var(--white);border-radius:20px;padding:2rem;display:flex;flex-direction:column;gap:.8rem}
+  .card h3{font-size:1.2rem;font-weight:600;margin-top:.6rem}
+  .card p{margin:0;font-size:.98rem;line-height:1.6;color:var(--body)}
+  .steps{display:flex;gap:6px}
+  .steps span{width:12px;height:12px;border-radius:50%;background:#D9D5CC}
+  .steps span.on{background:var(--gold)}
+  a.card{transition:transform .2s ease,box-shadow .2s ease;min-height:15rem;gap:1rem}
+  a.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,30,51,.12);color:var(--navy)}
+  .ico{width:52px;height:52px;border-radius:14px;background:var(--cream);display:flex;align-items:center;justify-content:center}
+  .card-title{font-size:1.3rem;font-weight:600}
+  .card-go{display:flex;align-items:center;gap:10px;font-size:.95rem;font-weight:600;margin-top:auto}
+
+  /* comparativo */
+  .white{background:var(--white)}
+  .compare{display:flex;flex-wrap:wrap;gap:1.5rem}
+  .box{flex:1 1 320px;min-width:0;border-radius:20px;padding:2.2rem;display:flex;flex-direction:column;gap:1.1rem}
+  .box p{margin:0;line-height:1.5}
+  .box.bad{border:1px solid var(--line);color:var(--body)}
+  .box.bad h3{color:var(--muted)}
+  .box.good{background:var(--navy);color:var(--cream)}
+  .box h3{font-size:1.15rem;font-weight:600;display:flex;align-items:center;gap:10px}
+
+  /* por que */
+  .why{display:flex;flex-wrap:wrap;gap:3rem;padding-top:6rem;padding-bottom:6rem}
+  .why-l{flex:1 1 340px;min-width:0}
+  .why-r{flex:1.4 1 420px;min-width:0;display:flex;flex-direction:column;gap:2rem}
+  .why-item{display:flex;gap:1.2rem}
+  .why-item h3{font-size:1.15rem;font-weight:600;margin-bottom:.4rem}
+  .why-item p{margin:0;line-height:1.6;color:var(--body)}
+
+  /* cta final */
+  .final{background:var(--navy);color:var(--cream)}
+  .final .wrap{padding-top:6rem;padding-bottom:6rem;display:flex;flex-direction:column;align-items:center;gap:2.5rem;text-align:center}
+  .final h2{font-size:clamp(2rem,4vw,3.4rem);max-width:44rem;line-height:1.08}
+  .final .dots{max-width:760px;gap:.3rem}
+  .final .ring{width:50%;height:50%}
+  .final .cta-dot{width:72%;height:72%;box-shadow:none}
+  .btn-gold{display:flex;align-items:center;gap:12px;background:var(--gold);color:var(--navy);padding:1rem 1.8rem;border-radius:999px;font-size:1.05rem;font-weight:700}
+  .btn-gold:hover{color:var(--navy);filter:brightness(1.06)}
+  .final small{font-size:.95rem;color:var(--soft)}
+
+  footer .wrap{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;justify-content:space-between;padding-top:2.5rem;padding-bottom:2.5rem;font-size:.88rem;color:var(--muted)}
+
+  /* simulador */
+  .sim{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:stretch}
+  .sim-in{flex:1.2 1 420px;min-width:0;background:var(--white);border-radius:24px;padding:2.2rem;display:flex;flex-direction:column;gap:1.8rem}
+  .sim-out{flex:1 1 340px;min-width:0;background:var(--navy);color:var(--cream);border-radius:24px;padding:2.2rem;display:flex;flex-direction:column;gap:1.4rem}
+  .lbl{display:block;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.7rem}
+  .tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:.6rem}
+  .tab,.chip,.mode button{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--cream);color:var(--navy);border-radius:14px;padding:.85rem .8rem;font-size:.95rem;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px}
+  .tab[aria-pressed="true"],.chip[aria-pressed="true"]{border-color:var(--navy);background:var(--navy);color:var(--cream)}
+  .tab svg{flex:none}
+  .tab[aria-pressed="true"] svg{stroke:var(--cream)}
+  .mode{display:inline-flex;background:var(--cream);border-radius:999px;padding:4px;gap:4px}
+  .mode button{border:0;border-radius:999px;padding:.6rem 1.1rem;background:transparent}
+  .mode button[aria-pressed="true"]{background:var(--white);box-shadow:0 2px 8px rgba(15,30,51,.1)}
+  .money{display:flex;align-items:baseline;gap:.4rem;border-bottom:2px solid var(--line);padding-bottom:.4rem}
+  .money span{font-size:1.4rem;font-weight:600;color:var(--muted)}
+  .money input{font:inherit;font-size:2.2rem;font-weight:700;letter-spacing:-.02em;color:var(--navy);border:0;background:transparent;width:100%;min-width:0;outline:none}
+  .money:focus-within{border-color:var(--gold)}
+  input[type=range]{width:100%;accent-color:var(--gold);margin-top:1rem;height:28px}
+  .range-ends{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted)}
+  .chips{display:flex;flex-wrap:wrap;gap:.6rem}
+  .chip{padding:.6rem 1rem;border-radius:999px}
+  .big{font-size:clamp(2.4rem,4vw,3.2rem);font-weight:700;letter-spacing:-.03em;line-height:1}
+  .big small{font-size:1rem;font-weight:400;color:var(--soft);letter-spacing:0}
+  .rows{display:flex;flex-direction:column;gap:.7rem;border-top:1px solid rgba(245,243,238,.15);padding-top:1.2rem}
+  .rows div{display:flex;justify-content:space-between;gap:1rem;font-size:.95rem}
+  .rows dt{color:var(--soft)} .rows dd{margin:0;font-weight:600;text-align:right}
+  .vs{background:rgba(245,243,238,.07);border-radius:16px;padding:1.2rem;display:flex;flex-direction:column;gap:.5rem;font-size:.92rem;line-height:1.5}
+  .vs strong{color:var(--gold)}
+  .sim-cta{display:flex;align-items:center;gap:14px;background:var(--gold);color:var(--navy);padding:1rem 1.3rem;border-radius:16px;font-weight:700;font-size:1rem;margin-top:auto}
+  .sim-cta:hover{color:var(--navy);filter:brightness(1.06)}
+  .sim-cta .pdot{position:relative;width:16px;height:16px;border-radius:50%;background:var(--navy);flex:none}
+  .sim-cta .pdot::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--navy);animation:pulse 1.8s ease-out infinite}
+  .note{margin:0;font-size:.78rem;line-height:1.5;color:var(--soft)}
+  .hl{background:linear-gradient(transparent 62%, rgba(200,150,47,.45) 62%);padding:0 .1em}
+  .duo{display:flex;flex-direction:column;gap:.8rem}
+  .ours{position:relative;border:2px solid var(--gold);border-radius:18px;padding:1.4rem 1.3rem 1.2rem;background:rgba(200,150,47,.08)}
+  .ours .big{font-size:clamp(2.2rem,3.6vw,3rem);overflow-wrap:anywhere}
+  .off{position:absolute;top:-14px;right:14px;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:.3rem .7rem;border-radius:999px;box-shadow:0 6px 16px rgba(200,150,47,.4)}
+  .ours-sub{margin:.5rem 0 0;font-size:.88rem;color:var(--cream)}
+  .market{border-radius:16px;padding:.9rem 1.1rem;background:rgba(245,243,238,.06);border:1px dashed rgba(245,243,238,.25);display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;align-items:center}
+  .market .flag{grid-column:1;justify-self:start}
+  .market .mid{grid-column:2;grid-row:1 / span 2;text-align:right}
+  .market .market-sub{grid-column:1;margin:0}
+  .flag{display:inline-block;white-space:nowrap;background:#3A475B;color:var(--cream);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:.35rem .7rem;border-radius:999px}
+  .mid{margin:0;font-size:1.5rem;font-weight:700;color:var(--soft);line-height:1.1}
+  .mid s{text-decoration-thickness:2px;text-decoration-color:#E07A5F}
+  .mid small{font-size:.85rem;font-weight:400}
+  .market-sub{margin:.5rem 0 0;font-size:.82rem;color:var(--soft)}
+  .save{margin:0;font-size:1.05rem;line-height:1.45}
+  .save strong{color:var(--gold)}
+  .chips.mini .chip{padding:.45rem .8rem;font-size:.85rem;min-height:40px;background:transparent;color:var(--cream);border-color:rgba(245,243,238,.3)}
+  .chips.mini .chip[aria-pressed="true"]{background:var(--cream);color:var(--navy);border-color:var(--cream)}
+
+  .legal{flex:1 1 100%;margin:0;font-size:.78rem;line-height:1.6;color:var(--muted);max-width:60rem}
+  .legal:first-of-type{border-top:1px solid var(--line);padding-top:1.5rem}
+
+  /* botão flutuante (celular) */
+  .float{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:var(--navy);display:none;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(15,30,51,.35);z-index:20}
+  .float .dot{width:22px;height:22px}
+  @media (max-width:720px){
+    .nav nav{display:none}
+    .hero{padding-top:3rem}
+    .float{display:flex}
+    body{padding-bottom:90px}
+    .sim-in,.sim-out{padding:1.5rem}
+    .money input{font-size:1.9rem}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#topo" aria-label="Singular Invest, voltar ao topo">
+      <svg width="32" height="32" viewBox="0 0 72 72" aria-hidden="true">
+        <g fill="#0F1E33" fill-opacity=".22">
+          <circle cx="14" cy="14" r="6"/><circle cx="36" cy="14" r="6"/>
+          <circle cx="14" cy="36" r="6"/><circle cx="36" cy="36" r="6"/><circle cx="58" cy="36" r="6"/>
+          <circle cx="14" cy="58" r="6"/><circle cx="36" cy="58" r="6"/><circle cx="58" cy="58" r="6"/>
+        </g>
+        <circle cx="58" cy="14" r="9" fill="#C8962F"/>
+      </svg>
+      <span class="word"><b style="font-size:1.45rem">s<span class="i">ı</span>ngular</b><small style="font-size:.55rem">invest</small></span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#simulador">Simulador</a>
+      <a href="#como">Como funciona</a>
+      <a href="#categorias">O que dá pra comprar</a>
+      <a href="#comparativo">Consórcio x financiamento</a>
+    </nav>
+    <a class="btn-dark js-wa" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20montar%20meu%20plano%20de%20cons%C3%B3rcio." target="_blank" rel="noopener"><span class="dot" style="width:10px;height:10px"></span>Falar agora</a>
+  </div>
+</header>
+
+<main id="topo">
+  <section class="wrap hero">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="dot" style="width:8px;height:8px"></span>Representante autorizado Embracon</p>
+      <h1>Seu plano não é igual ao de ninguém.</h1>
+      <p class="lead">Casa, carro ou caminhão. A gente monta um consórcio do tamanho do seu bolso. Sem juros. Sem enrolação.</p>
+      <p class="hint"><span aria-hidden="true" style="font-size:1.4rem">→</span>Toque no ponto dourado e fale com a gente no WhatsApp.</p>
+      <a href="#simulador" style="align-self:flex-start;display:flex;align-items:center;gap:12px;background:var(--white);border:2px solid var(--gold);border-radius:16px;padding:.9rem 1.2rem;font-weight:600;line-height:1.35">
+        <span style="background:var(--gold);color:var(--navy);font-weight:700;border-radius:999px;padding:.3rem .65rem;flex:none">−50%</span>
+        <span>Pague metade da parcela até ser contemplado.<br><span style="color:var(--muted);font-weight:400">Simule agora ↓</span></span>
+      </a>
+    </div>
+    <div class="hero-grid-box">
+      <div class="dots" style="grid-template-columns:repeat(6,minmax(0,1fr));max-width:440px"><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="ring"></span><span class="ring r2"></span><a class="cta-dot" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20montar%20meu%20plano%20de%20cons%C3%B3rcio." target="_blank" rel="noopener" aria-label="Falar com a Singular Invest no WhatsApp"></a></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div></div>
+    </div>
+  </section>
+
+  <section class="band" aria-label="Vantagens">
+    <div class="wrap">
+      <p><span class="dot" style="width:8px;height:8px"></span><b>Metade da parcela</b>&nbsp;até a contemplação</p>
+      <p><span class="dot" style="width:8px;height:8px"></span>Zero juros</p>
+      <p><span class="dot" style="width:8px;height:8px"></span>Compra à vista quando sair</p>
+      <p><span class="dot" style="width:8px;height:8px"></span>Lance para adiantar</p>
+    </div>
+  </section>
+
+  <section id="simulador" class="wrap section" style="padding-bottom:2rem">
+    <p class="eyebrow" style="display:flex;align-items:center;gap:10px"><span class="dot" style="width:8px;height:8px"></span>Simulador · só na Singular</p>
+    <h2 style="margin-bottom:.8rem;max-width:46rem">Pague <span class="hl">metade da parcela</span> até ser contemplado.</h2>
+    <p class="lead" style="margin-bottom:2.5rem">Enquanto o mercado cobra a parcela cheia, aqui você paga 50% até a sua carta sair. Simule e veja a diferença no seu bolso.</p>
+
+    <div class="sim">
+      <div class="sim-in">
+        <div>
+          <span class="lbl" id="lbl-tipo">O que você quer comprar?</span>
+          <div class="tabs" role="group" aria-labelledby="lbl-tipo" id="sim-tabs">
+            <button type="button" class="tab" data-cat="imovel" aria-pressed="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10"/></svg>Imóvel</button>
+            <button type="button" class="tab" data-cat="veiculo" aria-pressed="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16h14M3 16v-3l2-5h14l2 5v3M7 16v2M17 16v2"/></svg>Veículo</button>
+            <button type="button" class="tab" data-cat="pesados" aria-pressed="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h12v9H2zM14 10h4l3 3v3h-7"/></svg>Pesados</button>
+            <button type="button" class="tab" data-cat="servicos" aria-pressed="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg>Serviços</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="mode" role="group" aria-label="Simular por" id="sim-mode">
+            <button type="button" data-mode="credito" aria-pressed="true">Pelo valor do bem</button>
+            <button type="button" data-mode="parcela" aria-pressed="false">Pela parcela que cabe no bolso</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="lbl" for="sim-valor" id="sim-valor-lbl">Valor do crédito</label>
+          <div class="money"><span>R$</span><input id="sim-valor" inputmode="numeric" autocomplete="off"></div>
+          <input type="range" id="sim-range" aria-labelledby="sim-valor-lbl">
+          <div class="range-ends"><span id="sim-min"></span><span id="sim-max"></span></div>
+        </div>
+
+        <div>
+          <span class="lbl" id="lbl-prazo">Em quantos meses?</span>
+          <div class="chips" role="group" aria-labelledby="lbl-prazo" id="sim-prazos"></div>
+        </div>
+      </div>
+
+      <div class="sim-out" aria-live="polite">
+        <div class="duo">
+          <div class="ours">
+            <span class="off">−50%</span>
+            <span class="lbl" style="color:var(--gold);margin-bottom:.5rem" id="out-titulo">Com a Singular</span>
+            <p class="big" style="margin:0" id="out-big">R$ 1.016,67 <small>/mês</small></p>
+            <p class="ours-sub" id="out-sub">até a contemplação</p>
+          </div>
+          <div class="market">
+            <span class="flag">No mercado</span>
+            <p class="mid" id="out-cheia"><s>R$ 2.033,33</s> <small>/mês</small></p>
+            <p class="market-sub" id="out-cheia-sub">parcela cheia desde o 1º mês</p>
+          </div>
+        </div>
+
+        <p class="save" id="out-save">Sobra <strong>R$ 1.016,67</strong> no seu bolso todo mês até a carta sair.</p>
+
+        <dl class="rows" style="margin:0">
+          <div><dt>Crédito</dt><dd id="out-credito"></dd></div>
+          <div><dt>Prazo</dt><dd id="out-prazo"></dd></div>
+          <div><dt>Taxa de administração</dt><dd id="out-taxa"></dd></div>
+        </dl>
+
+        <div class="vs">
+          <span style="font-weight:600">E depois que eu for contemplado?</span>
+          <span>A metade que você não pagou volta diluída nas parcelas que faltam. Veja o exemplo:</span>
+          <div class="chips mini" role="group" aria-label="Mês da contemplação" id="sim-contem"></div>
+          <span id="out-depois"></span>
+        </div>
+
+        <a class="sim-cta" id="sim-wa" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Quero%20pagar%20metade%20da%20parcela%20at%C3%A9%20a%20contempla%C3%A7%C3%A3o." target="_blank" rel="noopener"><span class="pdot"></span>Quero pagar metade. Garantir no WhatsApp</a>
+        <p class="note">Simulação estimada. Parcela reduzida em 50% até a contemplação; depois dela, a diferença é diluída nas parcelas restantes. Não inclui seguro nem correção do crédito. Valores finais conforme a tabela vigente da Embracon na contratação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="como" class="wrap section">
+    <p class="eyebrow">Como funciona</p>
+    <h2 style="margin-bottom:3rem;max-width:40rem">Quatro passos. Do sonho à chave na mão.</h2>
+    <div class="grid4">
+      <div class="card"><div class="steps"><span class="on"></span><span></span><span></span><span></span></div><h3>Você escolhe o valor</h3><p>Diz o que quer comprar. A gente acha a carta de crédito certa pra você.</p></div>
+      <div class="card"><div class="steps"><span></span><span class="on"></span><span></span><span></span></div><h3>Paga todo mês</h3><p>Parcelas fixas, sem juros. Você entra num grupo com outras pessoas.</p></div>
+      <div class="card"><div class="steps"><span></span><span></span><span class="on"></span><span></span></div><h3>É contemplado</h3><p>Todo mês tem sorteio. Quer adiantar? Dá um lance.</p></div>
+      <div class="card"><div class="steps"><span></span><span></span><span></span><span class="on"></span></div><h3>Compra à vista</h3><p>Com a carta na mão, você negocia como quem paga à vista. E pede desconto.</p></div>
+    </div>
+  </section>
+
+  <section id="categorias" class="wrap" style="padding-top:3rem;padding-bottom:6rem">
+    <p class="eyebrow">O que dá pra comprar</p>
+    <h2 style="margin-bottom:3rem">Escolha o seu ponto de partida.</h2>
+    <div class="grid4">
+      <a class="card js-wa" data-tipo="imóvel" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20simular%20um%20cons%C3%B3rcio%20de%20im%C3%B3vel." target="_blank" rel="noopener">
+        <span class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"/></svg></span>
+        <span class="card-title">Imóveis</span>
+        <p>Casa, apartamento, terreno ou reforma. Sem juros no caminho.</p>
+        <span class="card-go"><span class="dot" style="width:12px;height:12px"></span>Simular no WhatsApp</span>
+      </a>
+      <a class="card js-wa" data-tipo="veículo" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20simular%20um%20cons%C3%B3rcio%20de%20ve%C3%ADculo." target="_blank" rel="noopener">
+        <span class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16h14M3 16v-3l2-5h14l2 5v3M7 16v2M17 16v2M6.5 12h.01M17.5 12h.01"/></svg></span>
+        <span class="card-title">Veículos</span>
+        <p>Carro novo ou seminovo. Troque de carro pagando à vista.</p>
+        <span class="card-go"><span class="dot" style="width:12px;height:12px"></span>Simular no WhatsApp</span>
+      </a>
+      <a class="card js-wa" data-tipo="pesados" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20simular%20um%20cons%C3%B3rcio%20de%20pesados." target="_blank" rel="noopener">
+        <span class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h12v9H2zM14 10h4l3 3v3h-7M6 19a2 2 0 100-4 2 2 0 000 4zM17 19a2 2 0 100-4 2 2 0 000 4z"/></svg></span>
+        <span class="card-title">Pesados</span>
+        <p>Caminhão, máquina ou trator. Faça seu negócio crescer.</p>
+        <span class="card-go"><span class="dot" style="width:12px;height:12px"></span>Simular no WhatsApp</span>
+      </a>
+      <a class="card js-wa" data-tipo="serviços" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20simular%20um%20cons%C3%B3rcio%20de%20servi%C3%A7os." target="_blank" rel="noopener">
+        <span class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg></span>
+        <span class="card-title">Serviços</span>
+        <p>Festa, viagem, curso ou cirurgia. Planeje sem cartão.</p>
+        <span class="card-go"><span class="dot" style="width:12px;height:12px"></span>Simular no WhatsApp</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="comparativo" class="white">
+    <div class="wrap" style="padding-top:6rem;padding-bottom:6rem">
+      <p class="eyebrow">Consórcio x financiamento</p>
+      <h2 style="margin-bottom:3rem;max-width:44rem">No financiamento, você paga o bem e mais um pedaço dele pro banco.</h2>
+      <div class="compare">
+        <div class="box bad">
+          <h3>Financiamento</h3>
+          <p>✕&nbsp; Juros todo santo mês</p>
+          <p>✕&nbsp; No fim, paga bem mais que o preço do bem</p>
+          <p>✕&nbsp; Entrada pesada logo de cara</p>
+        </div>
+        <div class="box good">
+          <h3><span class="dot" style="width:10px;height:10px"></span>Consórcio</h3>
+          <p>✓&nbsp; Zero juros. Só a taxa de administração</p>
+          <p>✓&nbsp; Seu dinheiro vira poder de compra à vista</p>
+          <p>✓&nbsp; Sem entrada obrigatória</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap why">
+    <div class="why-l">
+      <p class="eyebrow">Por que a Singular</p>
+      <h2>Aqui você não é mais um na fila.</h2>
+    </div>
+    <div class="why-r">
+      <div class="why-item"><span class="dot" style="width:14px;height:14px;margin-top:6px"></span><div><h3>Atendimento um a um</h3><p>Você fala com gente de verdade. Do primeiro oi até a contemplação.</p></div></div>
+      <div class="why-item"><span class="dot" style="width:14px;height:14px;margin-top:6px"></span><div><h3>Plano feito pra você</h3><p>Nada de pacote pronto. O valor e o prazo seguem o seu objetivo.</p></div></div>
+      <div class="why-item"><span class="dot" style="width:14px;height:14px;margin-top:6px"></span><div><h3>A força da Embracon por trás</h3><p>Uma das maiores administradoras de consórcio do Brasil. Fiscalizada pelo Banco Central.</p></div></div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>Entre tantos caminhos, o seu começa num ponto só.</h2>
+      <div class="dots dark" style="grid-template-columns:repeat(12,minmax(0,1fr));"><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="ring"></span><span class="ring r2"></span><a class="cta-dot" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20montar%20meu%20plano%20de%20cons%C3%B3rcio." target="_blank" rel="noopener" aria-label="Falar com a Singular Invest no WhatsApp"></a></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div><div class="cell"><span class="p"></span></div></div>
+      <a class="btn-gold js-wa" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20montar%20meu%20plano%20de%20cons%C3%B3rcio." target="_blank" rel="noopener">Quero meu plano no WhatsApp</a>
+      <small>(11) 97086-5407 · resposta rápida</small>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="word"><b style="font-size:1.15rem">s<span class="i">ı</span>ngular invest</b></span>
+    <span>Representante autorizado Embracon</span>
+    <span>singularinvest.com.br</span>
+    <p class="legal">Singular Invest é uma marca de Barrionuevo Soluções Financeiras LTDA, CNPJ 43.871.760/0001-87, representante autorizada da Embracon Administradora de Consórcio. A administração dos grupos de consórcio é feita pela Embracon, autorizada e fiscalizada pelo Banco Central do Brasil. As simulações deste site são estimativas e não garantem contemplação, que acontece por sorteio ou lance, conforme as regras do grupo. Valores, taxas e condições, incluindo a parcela reduzida até a contemplação, seguem a tabela vigente da Embracon na data da contratação.</p>
+    <p class="legal">© 2026 Singular Invest · Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<a class="float js-wa" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20montar%20meu%20plano%20de%20cons%C3%B3rcio." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><span class="dot"></span></a>
+
+<script>
+  function each(l,f){ Array.prototype.forEach.call(l,f); }
+
+  // Abre o WhatsApp direto, sem a página intermediária do wa.me:
+  // no computador → WhatsApp Web; no celular → app do WhatsApp.
+  var EH_CELULAR = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+  function linkDireto(href){
+    var m = href.match(/^https:\/\/wa\.me\/(\d+)(?:\?text=(.*))?$/);
+    if (!m) return href;
+    var q = 'phone=' + m[1] + (m[2] ? '&text=' + m[2] : '');
+    return EH_CELULAR ? 'https://api.whatsapp.com/send?' + q : 'https://web.whatsapp.com/send?' + q;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="https://wa.me/"]') : null;
+    if (!a) return;
+    e.preventDefault();
+    var url = linkDireto(a.href);
+    if (EH_CELULAR) window.location.href = url;
+    else window.open(url, '_blank', 'noopener');
+  });
+  // Número do WhatsApp (DDI 55 + DDD 11 + número)
+  var WA = '5511970865407';
+  function waLink(tipo){
+    var msg = tipo
+      ? 'Olá! Vim pelo site da Singular Invest e quero simular um consórcio de ' + tipo + '.'
+      : 'Olá! Vim pelo site da Singular Invest e quero montar meu plano de consórcio.';
+    return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+  }
+
+  // Liga todos os botões ao WhatsApp
+  each(document.querySelectorAll('.js-wa'), function(a){
+    a.href = waLink(a.dataset.tipo);
+  });
+
+
+  /* ============ SIMULADOR ============
+     AJUSTE AQUI com a tabela real da Embracon.
+     taxa  = taxa de administração TOTAL do plano (0.18 = 18%)
+     fundo = fundo de reserva TOTAL (0.02 = 2%)
+     juros = juros ao mês de um financiamento comum, só para comparar (0.012 = 1,2% a.m.)
+  */
+  var PLANOS = {
+    imovel:   { nome:'imóvel',   min:100000, max:1500000, passo:10000, inicial:300000, prazos:[150,180,200,220], taxa:0.20, fundo:0.02, juros:0.010 },
+    veiculo:  { nome:'veículo',  min:40000,  max:300000,  passo:5000,  inicial:90000,  prazos:[60,72,80,100],    taxa:0.16, fundo:0.02, juros:0.019 },
+    pesados:  { nome:'pesados',  min:150000, max:800000,  passo:10000, inicial:350000, prazos:[100,120],         taxa:0.16, fundo:0.02, juros:0.016 },
+    servicos: { nome:'serviços', min:15000,  max:40000,   passo:1000,  inicial:20000,  prazos:[24,36,40],        taxa:0.20, fundo:0.02, juros:0.040 }
+  };
+
+  // Parcela reduzida: quanto da parcela cheia o cliente paga até ser contemplado (0.5 = metade)
+  var REDUCAO = 0.5;
+  // Meses de contemplação usados no exemplo "e depois?"
+  var MESES_EXEMPLO = [6, 12, 24, 48];
+
+  var S = { cat:'imovel', mode:'credito', credito:PLANOS.imovel.inicial, prazo:PLANOS.imovel.prazos[1], contem:12 };
+  var $ = function(id){ return document.getElementById(id); };
+  var brl = function(v, cents){ return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:cents?2:0,maximumFractionDigits:cents?2:0}); };
+  var num = function(v){ return v.toLocaleString('pt-BR',{maximumFractionDigits:0}); };
+  var pct = function(v){ return (v*100).toLocaleString('pt-BR',{maximumFractionDigits:1}) + '%'; };
+
+  function plano(){ return PLANOS[S.cat]; }
+  function fator(){ var p = plano(); return 1 + p.taxa + p.fundo; }
+  function parcelaDe(credito){ return credito * fator() / S.prazo; }
+  function creditoDe(parcela){ return parcela * S.prazo / fator(); }
+  function clamp(v,a,b){ return Math.min(b, Math.max(a, v)); }
+  function arred(v){ var s = plano().passo; return Math.round(v / s) * s; }
+
+  function limites(){
+    var p = plano();
+    if (S.mode === 'credito') return { min:p.min, max:p.max, passo:p.passo };
+    return { min:Math.ceil(parcelaDe(p.min)*REDUCAO/10)*10, max:Math.floor(parcelaDe(p.max)*REDUCAO/10)*10, passo:10 };
+  }
+
+  function montarPrazos(){
+    var box = $('sim-prazos'); box.innerHTML = '';
+    plano().prazos.forEach(function(m){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'chip'; b.textContent = m + ' meses';
+      b.setAttribute('aria-pressed', m === S.prazo ? 'true' : 'false');
+      b.onclick = function(){
+        var parcelaAtual = parcelaDe(S.credito);
+        S.prazo = m;
+        if (S.mode === 'parcela') S.credito = clamp(arred(creditoDe(parcelaAtual)), plano().min, plano().max);
+        montarPrazos(); sincronizar();
+      };
+      box.appendChild(b);
+    });
+  }
+
+  function sincronizar(){
+    var L = limites(), r = $('sim-range');
+    var valor = S.mode === 'credito' ? S.credito : Math.round(parcelaDe(S.credito) * REDUCAO);
+    r.min = L.min; r.max = L.max; r.step = L.passo; r.value = clamp(valor, L.min, L.max);
+    $('sim-min').textContent = brl(L.min); $('sim-max').textContent = brl(L.max);
+    $('sim-valor-lbl').textContent = S.mode === 'credito' ? 'Valor do crédito' : 'Parcela que cabe no seu bolso';
+    if (document.activeElement !== $('sim-valor')) $('sim-valor').value = num(valor);
+    montarContem();
+    calcular();
+  }
+
+  function calcular(){
+    var p = plano(), n = S.prazo;
+    var cheia = parcelaDe(S.credito);          // parcela cheia (plano comum)
+    var reduzida = cheia * REDUCAO;             // o que o cliente paga até a contemplação
+    var sobra = cheia - reduzida;
+
+    if (S.mode === 'credito'){
+      $('out-titulo').textContent = 'Com a Singular';
+      $('out-big').innerHTML = brl(reduzida, true) + ' <small>/mês</small>';
+      $('out-sub').textContent = 'até a contemplação';
+      $('out-cheia').innerHTML = '<s>' + brl(cheia, true) + '</s> <small>/mês</small>';
+      $('out-cheia-sub').textContent = 'parcela cheia desde o 1º mês';
+      $('out-save').innerHTML = 'Sobra <strong>' + brl(sobra, true) + '</strong> no seu bolso todo mês até a carta sair.';
+    } else {
+      var creditoComum = arred(creditoDe(reduzida));
+      $('out-titulo').textContent = 'Com ' + brl(reduzida) + '/mês você leva';
+      $('out-big').innerHTML = brl(S.credito);
+      $('out-sub').textContent = 'de crédito para comprar';
+      $('out-cheia').innerHTML = brl(creditoComum);
+      $('out-cheia-sub').textContent = 'é o que essa parcela compra no plano comum';
+      $('out-save').innerHTML = 'Mesma parcela, <strong>o dobro de crédito</strong>. Esse é o poder da parcela reduzida.';
+    }
+    $('out-credito').textContent = brl(S.credito);
+    $('out-prazo').textContent = n + ' meses';
+    $('out-taxa').textContent = pct(p.taxa) + ' no plano todo';
+
+    // Depois da contemplação: o saldo que falta é dividido pelas parcelas restantes
+    var k = S.contem;
+    var depois = (cheia * n - reduzida * k) / (n - k);
+    $('out-depois').innerHTML = 'Se sair no mês ' + k + ', você paga <strong>' + brl(reduzida, true) + '</strong> até lá e depois <strong>' + brl(depois, true) + '</strong> por mês, já com o bem na mão.';
+
+    var msg = 'Olá! Quero pagar metade da parcela até a contemplação. Minha simulação no site da Singular Invest:\n' +
+      '• Consórcio de ' + p.nome + '\n' +
+      '• Crédito: ' + brl(S.credito) + '\n' +
+      '• Prazo: ' + n + ' meses\n' +
+      '• Parcela reduzida: ' + brl(reduzida, true) + ' (cheia: ' + brl(cheia, true) + ')\n' +
+      'Quero garantir esse plano.';
+    $('sim-wa').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+  }
+
+  function aplicarValor(v){
+    if (S.mode === 'credito') S.credito = clamp(arred(v), plano().min, plano().max);
+    else S.credito = clamp(arred(creditoDe(v / REDUCAO)), plano().min, plano().max);
+  }
+
+  function montarContem(){
+    var box = $('sim-contem'); box.innerHTML = '';
+    var meses = MESES_EXEMPLO.filter(function(m){ return m < S.prazo; });
+    if (meses.indexOf(S.contem) < 0) S.contem = meses[Math.min(1, meses.length - 1)];
+    meses.forEach(function(m){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'chip'; b.textContent = 'Mês ' + m;
+      b.setAttribute('aria-pressed', m === S.contem ? 'true' : 'false');
+      b.onclick = function(){ S.contem = m; montarContem(); calcular(); };
+      box.appendChild(b);
+    });
+  }
+
+  each(document.querySelectorAll('#sim-tabs .tab'), function(t){
+    t.onclick = function(){
+      S.cat = t.dataset.cat;
+      var p = plano(); S.credito = p.inicial; S.prazo = p.prazos[Math.min(1, p.prazos.length - 1)];
+      each(document.querySelectorAll('#sim-tabs .tab'), function(x){ x.setAttribute('aria-pressed', x === t ? 'true' : 'false'); });
+      montarPrazos(); sincronizar();
+    };
+  });
+  each(document.querySelectorAll('#sim-mode button'), function(b){
+    b.onclick = function(){
+      S.mode = b.dataset.mode;
+      each(document.querySelectorAll('#sim-mode button'), function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      sincronizar();
+    };
+  });
+  $('sim-range').oninput = function(){ aplicarValor(+this.value); $('sim-valor').value = num(+this.value); calcular(); };
+  // Não reescreve o campo enquanto a pessoa digita (no celular isso embaralha os números).
+  // Só formata quando ela sai do campo ou toca em "OK".
+  $('sim-valor').oninput = function(){
+    var d = this.value.replace(/\D/g, '');
+    if (d){ aplicarValor(+d); $('sim-range').value = +d; calcular(); }
+  };
+  $('sim-valor').onfocus = function(){ this.value = this.value.replace(/\D/g, ''); };
+  $('sim-valor').onblur = function(){ sincronizar(); };
+  $('sim-valor').onchange = function(){ sincronizar(); };
+  $('sim-valor').onkeydown = function(e){ if (e.key === 'Enter') this.blur(); };
+
+  try {
+    montarPrazos(); sincronizar();
+  } catch (e) {
+    $('out-big').textContent = 'Fale com a gente';
+    $('out-vs').textContent = 'Não deu para calcular aqui. Toque no botão e a gente simula pra você no WhatsApp.';
+  }
+</script>
+</body>
+</html>
