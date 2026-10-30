@@ -516,7 +516,7 @@
     imovel:  { nome:'imóvel',  rot:'Imóvel',  min:400000, max:3000000, passo:50000, inicial:500000, prazos:[200,220,240], prazoBase:240, taxa:0.00324165, adesao:0.001,
                tabela:{400000:1296.66,500000:1620.83,600000:1945.00,700000:2269.15,800000:2593.31,900000:2917.50,1000000:3241.65,1200000:3889.98,1500000:4862.48,2000000:6483.30,3000000:9724.96} },
     veiculo: { nome:'veículo', rot:'Veículo', min:70000,  max:180000,  passo:5000,  inicial:100000, prazos:[36,80,100],   prazoBase:100, taxa:0.00723,    adesao:0.001 },
-    pesados: { nome:'pesados', rot:'Pesados', min:150000, max:800000,  passo:10000, inicial:350000, prazos:[100,120],     prazoBase:120, taxa:0.006,      adesao:0.001, semTabela:true }
+    pesados: { nome:'pesados', rot:'Pesados', min:200000, max:700000,  passo:10000, inicial:300000, prazos:[70], prazoBase:70, taxa:1.14/70/1.25, adesao:0.001 }   /* taxa adm 14% em 70 meses; parcela cheia = crédito x 1,14 / 70 = valor depois da contemplação */
   };
   var DEPOIS = 0.25;
 
