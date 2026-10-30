@@ -103,6 +103,7 @@
   .lbl{display:block;font-family:var(--cond);font-weight:800;font-size:15px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
   .seg{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--ink)}
   .seg.two{grid-template-columns:1fr 1fr}
+  .seg.three{grid-template-columns:repeat(3,minmax(0,1fr))}
   .seg button{font:inherit;font-weight:600;font-size:15px;cursor:pointer;background:transparent;color:var(--ink);border:0;border-right:2px solid var(--ink);min-height:48px;padding:6px 8px;line-height:1.2}
   .seg button:last-child{border-right:0}
   .seg button:hover{background:rgba(200,150,47,.25)}
@@ -227,6 +228,9 @@
     .seg button:nth-child(2){border-right:0}
     .seg button:nth-child(-n+2){border-bottom:2px solid var(--ink)}
     .seg.two button{border-bottom:0}
+    .seg.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .seg.three button{border-bottom:0;border-right:2px solid var(--ink)}
+    .seg.three button:last-child{border-right:0}
     .seg.two button:first-child{border-right:2px solid var(--ink)}
     .money input{font-size:48px}
     .stamp b{font-size:30px}
@@ -308,7 +312,7 @@
         <span class="tag">Simulador</span>
         <div>
           <h2>Quanto fica o seu carnê</h2>
-          <p>Escolha o bem e o valor. O carnê ao lado mostra a parcela na Singular e a do plano comum. Depois, envie para a gente pelo WhatsApp.</p>
+          <p>Escolha o bem e o valor. O carnê ao lado mostra a sua parcela até a contemplação e quanto fica depois dela. Depois, envie para a gente pelo WhatsApp.</p>
         </div>
       </div>
 
@@ -316,11 +320,10 @@
         <div class="form">
           <div>
             <span class="lbl" id="lbl-tipo">O que você quer comprar</span>
-            <div class="seg" role="group" aria-labelledby="lbl-tipo" id="sim-tabs">
+            <div class="seg three" role="group" aria-labelledby="lbl-tipo" id="sim-tabs">
               <button type="button" class="tab" data-cat="imovel" aria-pressed="true">Imóvel</button>
               <button type="button" class="tab" data-cat="veiculo" aria-pressed="false">Veículo</button>
               <button type="button" class="tab" data-cat="pesados" aria-pressed="false">Pesados</button>
-              <button type="button" class="tab" data-cat="servicos" aria-pressed="false">Serviços</button>
             </div>
           </div>
           <div>
@@ -345,22 +348,16 @@
         <div class="slip" aria-live="polite">
           <div class="slip-h tag"><span>Carnê Singular</span><span id="slip-cat">Imóvel</span></div>
 
-          <div class="line main"><span class="k"><span id="out-titulo">Sua parcela</span><span class="stamp" id="stamp" aria-hidden="true"><b>−50%</b><span>até a contemplação</span></span></span><span class="v" id="out-big">R$ 1.016,67</span></div>
-          <div class="line"><span class="k" id="out-cheia-sub">Parcela no plano comum</span><span class="v" id="out-cheia"><s>R$ 2.033,33</s></span></div>
+          <div class="line main"><span class="k"><span id="out-titulo">Sua parcela</span><span class="stamp" id="stamp" aria-hidden="true"><b>Reduzida</b><span>até a contemplação</span></span></span><span class="v" id="out-big">R$ 1.620,83</span></div>
+          <div class="line"><span class="k" id="out-ini-k">1ª à 12ª parcela (com adesão)</span><span class="v" id="out-ini"></span></div>
+          <div class="line"><span class="k" id="out-dep-k">Depois de contemplado (estimativa)</span><span class="v" id="out-dep"></span></div>
           <div class="line"><span class="k">Crédito</span><span class="v" id="out-credito"></span></div>
-          <div class="line"><span class="k">Prazo · taxa de administração</span><span class="v"><span id="out-prazo"></span> · <span id="out-taxa"></span></span></div>
+          <div class="line"><span class="k">Prazo</span><span class="v" id="out-prazo"></span></div>
 
-          <p class="save" id="out-save">Sobra <strong>R$ 1.016,67</strong> no seu bolso todo mês até a carta sair.</p>
-
-          <div class="after" id="out-vs">
-            <b>E depois da contemplação?</b>
-            <span>A metade que você não pagou volta diluída nas parcelas que faltam. Escolha o mês:</span>
-            <div class="chips" role="group" aria-label="Mês da contemplação" id="sim-contem"></div>
-            <span id="out-depois"></span>
-          </div>
+          <p class="save" id="out-save"></p>
 
           <a class="act" id="sim-wa" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Quero%20pagar%20metade%20da%20parcela%20at%C3%A9%20a%20contempla%C3%A7%C3%A3o." target="_blank" rel="noopener">Enviar este carnê no WhatsApp <span class="ar" aria-hidden="true">→</span></a>
-          <p class="note">Simulação estimada. Parcela 50% menor até a contemplação; depois dela, a diferença é diluída nas parcelas restantes. Não inclui seguro nem correção do crédito. Valores finais conforme a tabela vigente da Embracon na contratação.</p>
+          <p class="note">Simulação estimada com base na tabela Embracon de parcela reduzida. Da 1ª à 12ª parcela inclui a adesão diluída. Depois da contemplação, a parcela estimada é cerca de 25% maior e varia conforme o lance e o mês em que a cota sai. Não inclui seguro nem correção do crédito. Valores finais conforme a tabela vigente na contratação.</p>
         </div>
       </div>
     </div>
@@ -391,7 +388,6 @@
         <a class="row" href="#simulador" data-cat="imovel"><span class="n">Imóveis</span><p>Casa, apartamento, terreno ou reforma.</p><span class="go">Simular →</span></a>
         <a class="row" href="#simulador" data-cat="veiculo"><span class="n">Veículos</span><p>Carro novo ou seminovo, pagando à vista.</p><span class="go">Simular →</span></a>
         <a class="row" href="#simulador" data-cat="pesados"><span class="n">Pesados</span><p>Caminhão, máquina ou trator para crescer.</p><span class="go">Simular →</span></a>
-        <a class="row" href="#simulador" data-cat="servicos"><span class="n">Serviços</span><p>Viagem, curso, festa ou cirurgia.</p><span class="go">Simular →</span></a>
       </div>
     </div>
   </section>
@@ -509,36 +505,40 @@
   if (!semMov) setInterval(sortear, 9000);
 
   /* ============ SIMULADOR ============
-     AJUSTE AQUI com a tabela real da Embracon.
-     taxa  = taxa de administração TOTAL do plano (0.18 = 18%)
-     fundo = fundo de reserva TOTAL (0.02 = 2%)
-     juros = juros ao mês de um financiamento comum, só para comparar
+     Tabela Embracon de parcela reduzida (até a contemplação).
+     taxa    = parcela reduzida por mês, em fração do crédito, no prazo mais longo (prazoBase)
+     adesao  = valor somado da 1ª à 12ª parcela, em fração do crédito (adesão diluída)
+     depois  = aumento estimado da parcela depois da contemplação (0.25 = +25%)
+     Prazos menores: a parcela sobe na proporção (prazoBase / prazo).
+     semTabela: true = sem tabela ainda; o simulador manda falar no WhatsApp.
   */
   var PLANOS = {
-    imovel:   { nome:'imóvel',   rot:'Imóvel',   min:100000, max:1500000, passo:10000, inicial:300000, prazos:[150,180,200,220], taxa:0.20, fundo:0.02, juros:0.010 },
-    veiculo:  { nome:'veículo',  rot:'Veículo',  min:40000,  max:300000,  passo:5000,  inicial:90000,  prazos:[60,72,80,100],    taxa:0.16, fundo:0.02, juros:0.019 },
-    pesados:  { nome:'pesados',  rot:'Pesados',  min:150000, max:800000,  passo:10000, inicial:350000, prazos:[100,120],         taxa:0.16, fundo:0.02, juros:0.016 },
-    servicos: { nome:'serviços', rot:'Serviços', min:15000,  max:40000,   passo:1000,  inicial:20000,  prazos:[24,36,40],        taxa:0.20, fundo:0.02, juros:0.040 }
+    imovel:  { nome:'imóvel',  rot:'Imóvel',  min:400000, max:3000000, passo:50000, inicial:500000, prazos:[200,220,240], prazoBase:240, taxa:0.00324165, adesao:0.001,
+               tabela:{400000:1296.66,500000:1620.83,600000:1945.00,700000:2269.15,800000:2593.31,900000:2917.50,1000000:3241.65,1200000:3889.98,1500000:4862.48,2000000:6483.30,3000000:9724.96} },
+    veiculo: { nome:'veículo', rot:'Veículo', min:70000,  max:180000,  passo:5000,  inicial:100000, prazos:[36,80,100],   prazoBase:100, taxa:0.00723,    adesao:0.001 },
+    pesados: { nome:'pesados', rot:'Pesados', min:150000, max:800000,  passo:10000, inicial:350000, prazos:[100,120],     prazoBase:120, taxa:0.006,      adesao:0.001, semTabela:true }
   };
-  var REDUCAO = 0.5;               // parcela reduzida até a contemplação (0.5 = metade)
-  var MESES_EXEMPLO = [6, 12, 24, 48];
+  var DEPOIS = 0.25;
 
-  var S = { cat:'imovel', mode:'credito', credito:PLANOS.imovel.inicial, prazo:PLANOS.imovel.prazos[1], contem:12 };
+  var S = { cat:'imovel', mode:'credito', credito:PLANOS.imovel.inicial, prazo:240 };
   function $(id){ return document.getElementById(id); }
   function brl(v, cents){ return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:cents?2:0,maximumFractionDigits:cents?2:0}); }
   var num = function(v){ return v.toLocaleString('pt-BR',{maximumFractionDigits:0}); };
-  var pct = function(v){ return (v*100).toLocaleString('pt-BR',{maximumFractionDigits:1}) + '%'; };
 
   function plano(){ return PLANOS[S.cat]; }
-  function fator(){ var p = plano(); return 1 + p.taxa + p.fundo; }
-  function parcelaDe(c){ return c * fator() / S.prazo; }
-  function creditoDe(p){ return p * S.prazo / fator(); }
+  function fator(){ var p = plano(); return p.taxa * p.prazoBase / S.prazo; }
+  function parcelaDe(c){
+    var p = plano();
+    if (p.tabela && p.tabela[c] && S.prazo === p.prazoBase) return p.tabela[c];   /* valor exato da tabela */
+    return Math.round(c * fator() * 100) / 100;
+  }
+  function creditoDe(v){ return v / fator(); }
   function clamp(v,a,b){ return Math.min(b, Math.max(a, v)); }
   function arred(v){ var s = plano().passo; return Math.round(v / s) * s; }
   function limites(){
     var p = plano();
     if (S.mode === 'credito') return { min:p.min, max:p.max, passo:p.passo };
-    return { min:Math.ceil(parcelaDe(p.min)*REDUCAO/10)*10, max:Math.floor(parcelaDe(p.max)*REDUCAO/10)*10, passo:10 };
+    return { min:Math.ceil(parcelaDe(p.min)/10)*10, max:Math.floor(parcelaDe(p.max)/10)*10, passo:10 };
   }
   function montarPrazos(){
     var box = $('sim-prazos'); box.innerHTML = '';
@@ -556,63 +556,57 @@
   }
   function sincronizar(){
     var L = limites(), r = $('sim-range');
-    var valor = S.mode === 'credito' ? S.credito : Math.round(parcelaDe(S.credito) * REDUCAO);
+    var valor = S.mode === 'credito' ? S.credito : Math.round(parcelaDe(S.credito));
     r.min = L.min; r.max = L.max; r.step = L.passo; r.value = clamp(valor, L.min, L.max);
     $('sim-min').textContent = brl(L.min); $('sim-max').textContent = brl(L.max);
     $('sim-valor-lbl').textContent = S.mode === 'credito' ? 'Valor do crédito' : 'Parcela que cabe no seu bolso';
     if (document.activeElement !== $('sim-valor')) $('sim-valor').value = num(valor);
-    montarContem(); calcular();
+    calcular();
   }
   var ultimo = '';
   function calcular(){
     var p = plano(), n = S.prazo;
-    var cheia = parcelaDe(S.credito), reduzida = cheia * REDUCAO, sobra = cheia - reduzida;
     $('slip-cat').textContent = p.rot;
+    $('out-credito').textContent = brl(S.credito);
+    $('out-prazo').textContent = n + ' meses';
+    if (p.semTabela){
+      $('out-titulo').textContent = 'Sua parcela';
+      $('out-big').textContent = 'Sob consulta';
+      $('out-ini').textContent = '—'; $('out-dep').textContent = '—';
+      $('out-save').innerHTML = 'A tabela de pesados é montada caso a caso. Mande o valor no WhatsApp e a gente simula para você.';
+      var m0 = 'Olá! Quero simular um consórcio de pesados no site da Singular Invest:\n• Crédito: ' + brl(S.credito) + '\n• Prazo: ' + n + ' meses\nPode me passar a parcela?';
+      $('sim-wa').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(m0);
+      ultimo = ''; return;
+    }
+    var red = parcelaDe(S.credito);
+    var ini = Math.round((red + S.credito * p.adesao) * 100) / 100;
+    var dep = Math.round(red * (1 + DEPOIS) * 100) / 100;
     if (S.mode === 'credito'){
       $('out-titulo').textContent = 'Sua parcela';
-      $('out-big').innerHTML = brl(reduzida, true);
-      $('out-cheia-sub').textContent = 'Parcela no plano comum';
-      $('out-cheia').innerHTML = '<s>' + brl(cheia, true) + '</s>';
-      $('out-save').innerHTML = 'Sobra <strong>' + brl(sobra, true) + '</strong> no seu bolso todo mês até a carta sair.';
+      $('out-big').innerHTML = brl(red, true);
+      $('out-save').innerHTML = 'Da 13ª parcela até a sua cota ser contemplada, você paga <strong>' + brl(red, true) + '</strong> por mês.';
     } else {
-      var comum = arred(creditoDe(reduzida));
       $('out-titulo').textContent = 'Seu crédito';
       $('out-big').innerHTML = brl(S.credito);
-      $('out-cheia-sub').textContent = 'Crédito no plano comum, mesma parcela';
-      $('out-cheia').innerHTML = '<s>' + brl(comum) + '</s>';
-      $('out-save').innerHTML = 'Com ' + brl(reduzida, true) + ' por mês, você leva <strong>o dobro de crédito</strong>.';
+      $('out-save').innerHTML = 'Com <strong>' + brl(red, true) + '</strong> por mês até a contemplação, você leva <strong>' + brl(S.credito) + '</strong> de crédito.';
     }
+    $('out-ini').innerHTML = brl(ini, true);
+    $('out-dep').innerHTML = '≈ ' + brl(dep, true);
     var txt = $('out-big').textContent;
     if (txt !== ultimo && !semMov){ var st = $('stamp'); st.classList.remove('thump'); void st.offsetWidth; st.classList.add('thump'); }
     ultimo = txt;
-    $('out-credito').textContent = brl(S.credito);
-    $('out-prazo').textContent = n + ' meses';
-    $('out-taxa').textContent = pct(p.taxa);
-    var k = S.contem, depois = (cheia * n - reduzida * k) / (n - k);
-    $('out-depois').innerHTML = 'Se sair no mês ' + k + ', você paga <strong>' + brl(reduzida, true) + '</strong> até lá e depois <strong>' + brl(depois, true) + '</strong> por mês, já com o bem na mão.';
-    var msg = 'Olá! Quero pagar metade da parcela até a contemplação. Minha simulação no site da Singular Invest:\n' +
+    var msg = 'Olá! Fiz uma simulação no site da Singular Invest:\n' +
       '• Consórcio de ' + p.nome + '\n• Crédito: ' + brl(S.credito) + '\n• Prazo: ' + n + ' meses\n' +
-      '• Parcela reduzida: ' + brl(reduzida, true) + ' (cheia: ' + brl(cheia, true) + ')\nQuero garantir esse plano.';
+      '• 1ª à 12ª parcela: ' + brl(ini, true) + '\n• Parcela reduzida até a contemplação: ' + brl(red, true) + '\nQuero garantir esse plano.';
     $('sim-wa').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
   }
   function aplicarValor(v){
     if (S.mode === 'credito') S.credito = clamp(arred(v), plano().min, plano().max);
-    else S.credito = clamp(arred(creditoDe(v / REDUCAO)), plano().min, plano().max);
-  }
-  function montarContem(){
-    var box = $('sim-contem'); box.innerHTML = '';
-    var meses = MESES_EXEMPLO.filter(function(m){ return m < S.prazo; });
-    if (meses.indexOf(S.contem) < 0) S.contem = meses[Math.min(1, meses.length - 1)];
-    meses.forEach(function(m){
-      var b = document.createElement('button');
-      b.type = 'button'; b.className = 'chip'; b.textContent = 'Mês ' + m;
-      b.setAttribute('aria-pressed', m === S.contem ? 'true' : 'false');
-      b.onclick = function(){ S.contem = m; montarContem(); calcular(); };
-      box.appendChild(b);
-    });
+    else S.credito = clamp(arred(creditoDe(v)), plano().min, plano().max);
   }
   function escolherCat(cat){
-    S.cat = cat; var p = plano(); S.credito = p.inicial; S.prazo = p.prazos[Math.min(1, p.prazos.length - 1)];
+    if (!PLANOS[cat]) cat = 'imovel';
+    S.cat = cat; var p = plano(); S.credito = p.inicial; S.prazo = p.prazoBase;
     each(document.querySelectorAll('#sim-tabs button'), function(x){ x.setAttribute('aria-pressed', x.dataset.cat === cat ? 'true' : 'false'); });
     montarPrazos(); sincronizar();
   }
@@ -632,7 +626,7 @@
   $('sim-valor').onchange = function(){ sincronizar(); };
   $('sim-valor').onkeydown = function(e){ if (e.key === 'Enter') this.blur(); };
   try { montarPrazos(); sincronizar(); }
-  catch (e) { $('out-big').textContent = 'Fale com a gente'; $('out-vs').textContent = 'Não deu para calcular aqui. Toque no botão e a gente simula para você no WhatsApp.'; }
+  catch (e) { $('out-big').textContent = 'Fale com a gente'; $('out-save').textContent = 'Não deu para calcular aqui. Toque no botão e a gente simula para você no WhatsApp.'; }
 </script>
 </body>
 </html>
