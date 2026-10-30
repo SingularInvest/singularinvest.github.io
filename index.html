@@ -3,308 +3,268 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Singular Invest · Parcela 50% menor até a contemplação</title>
-<meta name="description" content="Consórcio com parcela 50% menor até a contemplação. Singular Invest, representante autorizado Embracon. Simule e fale com a gente no WhatsApp.">
-<meta property="og:title" content="Singular Invest · Sua parcela, pela metade">
-<meta property="og:description" content="Pague 50% da parcela até ser contemplado. Simule em 30 segundos.">
+<title>Singular Invest · Metade da parcela até a contemplação</title>
+<meta name="description" content="Consórcio com parcela 50% menor até a contemplação. Singular Invest, representante autorizado Embracon. Simule e envie pelo WhatsApp.">
+<meta property="og:title" content="Singular Invest · Pague metade da parcela até ser contemplado">
+<meta property="og:description" content="Simule em 30 segundos e envie pelo WhatsApp.">
 <meta property="og:url" content="https://singularinvest.com.br">
-<meta name="theme-color" content="#0B1729">
+<meta name="theme-color" content="#C8962F">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'%3E%3Crect width='72' height='72' rx='16' fill='%23F5F3EE'/%3E%3Cg fill='%230F1E33' fill-opacity='.25'%3E%3Ccircle cx='16' cy='16' r='6'/%3E%3Ccircle cx='36' cy='16' r='6'/%3E%3Ccircle cx='16' cy='36' r='6'/%3E%3Ccircle cx='36' cy='36' r='6'/%3E%3Ccircle cx='56' cy='36' r='6'/%3E%3Ccircle cx='16' cy='56' r='6'/%3E%3Ccircle cx='36' cy='56' r='6'/%3E%3Ccircle cx='56' cy='56' r='6'/%3E%3C/g%3E%3Ccircle cx='56' cy='16' r='9' fill='%23C8962F'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Archivo:wght@400;500;600;700&family=Sora:wght@600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --night:#0B1729; --navy:#0F1E33; --navy-2:#26364F; --cream:#F5F3EE; --paper:#FBFAF7; --line:#E2DED5;
-    --muted:#5B6472; --body:#3E4757; --soft:#A9B3C2; --gold:#C8962F; --gold-2:#E2B85C; --white:#FFFFFF;
-    --serif:'Instrument Serif', Georgia, serif;
-    --ease:cubic-bezier(.2,.7,.1,1);
+    --ink:#0F1E33;       /* azul-tinta da marca */
+    --gold:#C8962F;      /* ouro da marca, usado chapado */
+    --gold-ink:#7A5712;  /* ouro escuro para texto sobre papel */
+    --paper:#F7F4EC;     /* papel de carnê */
+    --slip:#FFFDF7;      /* folha do recibo */
+    --rule:rgba(15,30,51,.18);
+    --grey:#4F5866;
+    --cond:'Big Shoulders Display', Impact, sans-serif;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--cream);color:var(--navy);font-family:'Sora',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
-  p,li,dd,dt,.card-title{text-wrap:pretty}
-  h1,h2,h3{margin:0;text-wrap:balance}
-  .wrap{max-width:1200px;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem}
-  .eyebrow{margin:0 0 1rem;display:flex;align-items:center;gap:10px;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold)}
-  h2{font-size:clamp(2rem,3.4vw,3rem);font-weight:600;letter-spacing:-.035em;line-height:1.08}
-  .it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
-  .dot{display:inline-block;border-radius:50%;background:var(--gold);flex:none}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+  p{margin:0;text-wrap:pretty}
+  h1,h2,h3{margin:0;font-weight:inherit}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+  .cond{font-family:var(--cond);text-transform:uppercase;letter-spacing:.01em}
+  .tag{font-family:var(--cond);font-weight:800;font-size:15px;letter-spacing:.14em;text-transform:uppercase}
 
-  /* logo */
-  .logo{display:flex;align-items:center;gap:12px}
-  .word{display:flex;flex-direction:column}
-  .word b{font-weight:600;letter-spacing:-.03em;line-height:1}
-  .word small{font-weight:300;letter-spacing:.42em;text-transform:uppercase;opacity:.65}
+  /* logo (marca original em Sora) */
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo b{font-family:'Sora',sans-serif;font-weight:600;font-size:22px;letter-spacing:-.03em;line-height:1}
+  .logo small{display:block;font-family:'Sora',sans-serif;font-weight:600;font-size:8.5px;letter-spacing:.45em;text-transform:uppercase;margin-top:3px}
   .i{position:relative;display:inline-block}
-  .i::after{content:"";position:absolute;left:50%;top:.02em;width:.2em;height:.2em;margin-left:-.1em;border-radius:50%;background:var(--gold)}
+  .i::after{content:"";position:absolute;left:50%;top:.02em;width:.2em;height:.2em;margin-left:-.1em;border-radius:50%;background:var(--ink)}
 
-  /* botões */
-  .btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 1.6rem;border-radius:999px;font-weight:600;font-size:1rem;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .35s}
-  .btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s var(--ease)}
-  .btn:hover::after{transform:translateX(120%)}
-  .btn:hover{transform:translateY(-2px)}
-  .btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--night);box-shadow:0 10px 30px -10px rgba(200,150,47,.7)}
-  .btn-gold:hover{box-shadow:0 18px 40px -12px rgba(200,150,47,.85)}
-  .btn-line{border:1px solid rgba(245,243,238,.28);color:var(--cream)}
-  .btn-line:hover{border-color:var(--gold)}
-  .btn .arr{transition:transform .35s var(--ease)}
-  .btn:hover .arr{transform:translateX(4px)}
+  /* botão: bloco retangular de tinta, sem brilho */
+  .act{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:58px;padding:0 22px 0 24px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;font-weight:600;font-size:17px;transition:background .2s,color .2s}
+  .act:hover{background:transparent;color:var(--ink)}
+  .act .ar{font-family:var(--cond);font-size:26px;line-height:1;transition:transform .25s}
+  .act:hover .ar{transform:translateX(5px)}
+  .act.on-ink{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+  .act.on-ink:hover{background:transparent;color:var(--gold)}
+  .act.ghost{background:transparent;color:var(--ink)}
+  .act.ghost:hover{background:var(--ink);color:var(--paper)}
 
-  /* header */
-  header{position:fixed;inset:0 0 auto 0;z-index:30;color:var(--cream);transition:background .4s,box-shadow .4s,color .4s}
-  header.solid{background:rgba(11,23,41,.86);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(245,243,238,.08)}
-  .nav{display:flex;gap:1rem;align-items:center;justify-content:space-between;padding-top:1.1rem;padding-bottom:1.1rem}
-  .nav nav{display:flex;gap:2rem;font-size:.9rem;color:rgba(245,243,238,.78)}
-  .nav nav a{position:relative;padding:.3rem 0}
-  .nav nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--gold);transition:right .4s var(--ease)}
-  .nav nav a:hover{color:var(--cream)}
-  .nav nav a:hover::after{right:0}
-  .nav .btn{min-height:44px;padding:0 1.2rem;font-size:.9rem}
+  /* topo */
+  header{background:var(--gold);border-bottom:2px solid var(--ink)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:74px}
+  .bar nav{display:flex;gap:30px;font-weight:500;font-size:15px}
+  .bar nav a{text-decoration:none;border-bottom:2px solid transparent;padding:4px 0}
+  .bar nav a:hover{border-color:var(--ink)}
+  .bar .act{min-height:44px;font-size:15px;padding:0 16px;gap:14px}
+  .kicker span{white-space:normal}
 
-  /* hero */
-  .hero{position:relative;overflow:hidden;background:var(--night);color:var(--cream);padding-top:8.5rem;padding-bottom:6rem}
-  .hero::before{content:"";position:absolute;width:900px;height:900px;right:-260px;top:-320px;background:radial-gradient(closest-side,rgba(200,150,47,.22),transparent 70%);animation:glow 14s ease-in-out infinite alternate;pointer-events:none}
-  .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(245,243,238,.07) 1px,transparent 1.2px);background-size:28px 28px;mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent);pointer-events:none}
-  @keyframes glow{to{transform:translate(-120px,80px) scale(1.1)}}
-  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center}
-  .hero .eyebrow{color:var(--soft)}
-  h1{font-size:clamp(2.8rem,6vw,5.4rem);font-weight:600;letter-spacing:-.045em;line-height:.98}
-  h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
-  h1 .line>span{display:inline-block;transform:translateY(105%);animation:rise 1s var(--ease) forwards}
-  h1 .line:nth-child(2)>span{animation-delay:.12s}
-  h1 .line:nth-child(3)>span{animation-delay:.24s}
-  h1 .it{color:var(--gold-2)}
-  @keyframes rise{to{transform:none}}
-  .hero-lead{margin:1.6rem 0 2.4rem;font-size:1.15rem;line-height:1.65;color:#C9D0DB;max-width:31rem}
-  .hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem}
-  .fade{opacity:0;animation:fade 1s var(--ease) forwards}
-  .d1{animation-delay:.45s}.d2{animation-delay:.6s}.d3{animation-delay:.8s}
-  @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  /* HERO: a assembleia */
+  .hero{background:var(--gold);border-bottom:2px solid var(--ink)}
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;padding-top:56px;padding-bottom:64px;align-items:end}
+  .kicker{display:flex;gap:14px;align-items:center;margin-bottom:22px}
+  .kicker span{border:2px solid var(--ink);padding:3px 10px}
+  h1{font-family:var(--cond);text-transform:uppercase;font-weight:900;line-height:.86;letter-spacing:-.005em}
+  h1 .s{display:block;font-size:clamp(40px,5vw,64px);font-weight:800}
+  h1 .xl{display:block;font-size:clamp(84px,26vw,232px);line-height:.8;margin:6px 0 10px -6px}
+  .lede{max-width:30em;font-size:19px;margin:28px 0 34px}
 
-  /* cartão-demonstração do hero */
-  .demo{position:relative;border-radius:28px;padding:2.2rem;background:linear-gradient(160deg,rgba(245,243,238,.09),rgba(245,243,238,.03));border:1px solid rgba(245,243,238,.12);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
-  .demo-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
-  .demo-k{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
-  .big50{font-family:var(--serif);font-size:clamp(5.5rem,10vw,8.5rem);line-height:.8;color:var(--gold-2);letter-spacing:-.04em;opacity:0;transform:scale(.92);transition:opacity 1s var(--ease),transform 1.2s var(--ease)}
-  .demo.go .big50{opacity:1;transform:none}
-  .big50 small{font-size:.38em;letter-spacing:0;margin-left:.05em}
-  .bars{display:flex;flex-direction:column;gap:1.3rem;margin-top:2rem}
-  .bar-row{display:flex;flex-direction:column;gap:.55rem}
-  .bar-h{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-size:.85rem;color:var(--soft)}
-  .bar-h b{font-size:1.05rem;color:var(--cream);font-weight:600;font-variant-numeric:tabular-nums}
-  .bar-h .strike{color:var(--soft);text-decoration:line-through;text-decoration-color:rgba(224,122,95,.8)}
-  .track{position:relative;height:10px;border-radius:99px;background:rgba(245,243,238,.08)}
-  .fill{position:absolute;left:0;top:0;bottom:0;border-radius:99px;width:0;transition:width 1.8s var(--ease)}
-  .fill.full{background:rgba(245,243,238,.28)}
-  .fill.half{background:linear-gradient(90deg,var(--gold),var(--gold-2))}
-  .fill.half::after{content:"";position:absolute;right:-7px;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 0 0 rgba(226,184,92,.6);animation:ping 2.4s ease-out 2.2s infinite}
-  @keyframes ping{0%{box-shadow:0 0 0 0 rgba(226,184,92,.55)}100%{box-shadow:0 0 0 16px rgba(226,184,92,0)}}
-  .demo.go .fill.full{width:100%}
-  .demo.go .fill.half{width:50%;transition-delay:.5s}
-  .demo-foot{margin:1.6rem 0 0;padding-top:1.2rem;border-top:1px solid rgba(245,243,238,.1);display:flex;justify-content:space-between;align-items:center;gap:1rem;font-size:.82rem;color:var(--soft)}
-  .demo-foot a{color:var(--gold-2);font-weight:600;white-space:nowrap}
-  .demo-foot a:hover{color:var(--cream)}
+  .board{border:2px solid var(--ink);background:var(--gold)}
+  .board-h{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:2px solid var(--ink)}
+  .board-h .live{display:flex;align-items:center;gap:8px}
+  .board-h .live i{width:10px;height:10px;border-radius:50%;background:var(--ink);animation:blink 1s steps(2) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .grid{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;padding:18px 16px}
+  .c{aspect-ratio:1;border-radius:50%;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--cond);font-weight:800;font-size:clamp(13px,1.3vw,17px);font-variant-numeric:tabular-nums;transition:background .08s,color .08s}
+  .c.hit{background:var(--ink);color:var(--gold)}
+  .c.win{background:var(--ink);color:var(--gold);box-shadow:0 0 0 4px var(--gold),0 0 0 6px var(--ink)}
+  .board-f{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;padding:14px 16px;border-top:2px solid var(--ink);min-height:84px}
+  .board-f .big{font-family:var(--cond);font-weight:900;font-size:56px;line-height:.9}
+  .board-f p{font-size:15px;line-height:1.4}
 
   /* faixa */
-  .band{background:var(--night);color:var(--cream);border-top:1px solid rgba(245,243,238,.08)}
-  .band .wrap{display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:1.2rem 2rem;padding-top:1.6rem;padding-bottom:1.6rem;font-size:.92rem}
-  .band p{margin:0;display:flex;align-items:center;gap:12px;color:#C9D0DB}
-  .band b{color:var(--cream);font-weight:600}
+  .strip{background:var(--ink);color:var(--paper)}
+  .strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;padding-top:16px;padding-bottom:16px}
+  .strip span{font-family:var(--cond);font-weight:800;font-size:20px;letter-spacing:.05em;text-transform:uppercase}
+  .strip b{color:var(--gold);font-weight:inherit}
 
-  /* seções */
-  .section{padding-top:7rem;padding-bottom:7rem}
-  .head{max-width:46rem;margin-bottom:3.2rem}
-  .head p:not(.eyebrow){margin:1rem 0 0;font-size:1.1rem;line-height:1.65;color:var(--body)}
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
-  .reveal.in{opacity:1;transform:none}
-  .stagger>*{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-  .stagger.in>*{opacity:1;transform:none}
-  .stagger.in>*:nth-child(2){transition-delay:.1s}.stagger.in>*:nth-child(3){transition-delay:.2s}.stagger.in>*:nth-child(4){transition-delay:.3s}
+  /* cabeçalho das seções */
+  .sec{padding:96px 0}
+  .sh{display:grid;grid-template-columns:220px 1fr;gap:32px;margin-bottom:48px;align-items:start}
+  .sh .tag{padding-top:10px;border-top:2px solid var(--ink);color:var(--gold-ink)}
+  h2{font-family:var(--cond);text-transform:uppercase;font-weight:900;font-size:clamp(46px,6vw,84px);line-height:1;max-width:14ch}
+  .sh p{margin-top:16px;max-width:36em;color:var(--grey)}
 
-  /* simulador */
-  #simulador{background:var(--paper)}
-  .sim{display:grid;grid-template-columns:1.15fr 1fr;gap:1.5rem;align-items:start}
-  .sim-in{position:sticky;top:96px;background:var(--white);border:1px solid var(--line);border-radius:28px;padding:2.4rem;display:flex;flex-direction:column;gap:2rem}
-  .sim-out{position:relative;overflow:hidden;background:var(--night);color:var(--cream);border-radius:28px;padding:2.4rem;display:flex;flex-direction:column;gap:1.4rem}
-  .sim-out::before{content:"";position:absolute;width:520px;height:520px;right:-220px;top:-240px;background:radial-gradient(closest-side,rgba(200,150,47,.2),transparent 70%);pointer-events:none}
-  .sim-out>*{position:relative}
-  .lbl{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem}
-  .tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
-  .tab,.chip,.mode button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--paper);color:var(--navy);border-radius:14px;padding:.85rem .6rem;font-size:.92rem;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;transition:background .3s,border-color .3s,color .3s,transform .3s var(--ease)}
-  .tab:hover,.chip:hover{border-color:var(--gold)}
-  .tab[aria-pressed="true"],.chip[aria-pressed="true"]{border-color:var(--navy);background:var(--navy);color:var(--cream)}
-  .tab svg{flex:none;stroke:currentColor}
-  .mode{position:relative;display:grid;grid-template-columns:1fr 1fr;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px}
-  .mode::before{content:"";position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:var(--white);box-shadow:0 4px 14px rgba(15,30,51,.1);transition:transform .45s var(--ease)}
-  .mode[data-active="parcela"]::before{transform:translateX(100%)}
-  .mode button{position:relative;border:0;border-radius:999px;background:transparent;padding:.6rem .8rem;line-height:1.25;text-align:center;color:var(--muted)}
-  .mode button[aria-pressed="true"]{color:var(--navy)}
-  .money{display:flex;align-items:baseline;gap:.5rem;border-bottom:1px solid var(--line);padding-bottom:.5rem;transition:border-color .3s}
-  .money span{font-size:1.3rem;font-weight:600;color:var(--muted)}
-  .money input{font:inherit;font-size:2.4rem;font-weight:600;letter-spacing:-.03em;color:var(--navy);border:0;background:transparent;width:100%;min-width:0;outline:none;font-variant-numeric:tabular-nums}
-  .money:focus-within{border-color:var(--gold)}
-  input[type=range]{width:100%;accent-color:var(--gold);margin-top:1.1rem;height:28px}
-  .range-ends{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted)}
-  .chips{display:flex;flex-wrap:wrap;gap:.6rem}
-  .chip{padding:.55rem 1rem;border-radius:999px}
-  .out-k{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2)}
-  .big{margin:.4rem 0 0;font-size:clamp(2.6rem,4.4vw,3.6rem);font-weight:600;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
-  .big small{font-size:1rem;font-weight:400;color:var(--soft);letter-spacing:0}
-  .tick{animation:tick .6s var(--ease)}
-  @keyframes tick{from{opacity:.35;transform:translateY(6px)}to{opacity:1;transform:none}}
-  .badge{position:absolute;top:0;right:0;font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--gold-2)}
-  .sub{margin:.5rem 0 0;font-size:.88rem;color:#C9D0DB}
-  .cmp{display:flex;flex-direction:column;gap:.9rem;padding:1.2rem 0;border-top:1px solid rgba(245,243,238,.1);border-bottom:1px solid rgba(245,243,238,.1)}
-  .cmp .bar-h{font-size:.8rem}
-  .cmp .bar-h b{font-size:.95rem}
-  .cmp .fill{transition:width .8s var(--ease)}
-  .save{margin:0;font-size:1rem;line-height:1.5;color:#E3E7EE}
-  .save strong{color:var(--gold-2);font-weight:600}
-  .rows{margin:0;display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:.4rem 1rem}
-  .rows div{display:flex;flex-direction:column;gap:.2rem}
-  .rows dt{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
-  .rows dd{margin:0;font-weight:600;font-size:.95rem;white-space:nowrap}
-  .after{display:flex;flex-direction:column;gap:.7rem;font-size:.88rem;line-height:1.55;color:#C9D0DB}
-  .after b{color:var(--cream);font-weight:600}
-  .after strong{color:var(--gold-2);font-weight:600}
-  .chips.mini .chip{padding:.4rem .85rem;font-size:.82rem;min-height:38px;background:transparent;color:var(--cream);border-color:rgba(245,243,238,.22)}
-  .chips.mini .chip[aria-pressed="true"]{background:var(--cream);color:var(--navy);border-color:var(--cream)}
-  .sim-out .btn{width:100%;margin-top:auto}
-  .note{margin:0;font-size:.74rem;line-height:1.55;color:var(--soft)}
+  /* SIMULADOR: formulário + carnê */
+  .sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border:2px solid var(--ink);background:var(--slip)}
+  .form{padding:32px;display:flex;flex-direction:column;gap:28px;align-self:start;position:sticky;top:12px}
+  .lbl{display:block;font-family:var(--cond);font-weight:800;font-size:15px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+  .seg{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--ink)}
+  .seg.two{grid-template-columns:1fr 1fr}
+  .seg button{font:inherit;font-weight:600;font-size:15px;cursor:pointer;background:transparent;color:var(--ink);border:0;border-right:2px solid var(--ink);min-height:48px;padding:6px 8px;line-height:1.2}
+  .seg button:last-child{border-right:0}
+  .seg button:hover{background:rgba(200,150,47,.25)}
+  .seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+  .money{display:flex;align-items:baseline;gap:8px;border-bottom:2px solid var(--ink);padding-bottom:4px}
+  .money span{font-family:var(--cond);font-weight:800;font-size:30px}
+  .money input{font-family:var(--cond);font-weight:900;font-size:64px;line-height:1;color:var(--ink);border:0;background:transparent;width:100%;min-width:0;outline:none;font-variant-numeric:tabular-nums}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin-top:12px}
+  input[type=range]::-webkit-slider-runnable-track{height:4px;background:var(--ink)}
+  input[type=range]::-moz-range-track{height:4px;background:var(--ink)}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--gold);border:3px solid var(--ink);margin-top:-10px;cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--gold);border:3px solid var(--ink);cursor:pointer}
+  .ends{display:flex;justify-content:space-between;font-size:13px;color:var(--grey)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font:inherit;font-weight:600;font-size:15px;cursor:pointer;background:transparent;color:var(--ink);border:2px solid var(--ink);min-height:44px;padding:0 14px}
+  .chip:hover{background:rgba(200,150,47,.25)}
+  .chip[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
 
-  /* passos */
-  .steps-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
-  .step{padding:2rem 1.6rem 0 0;display:flex;flex-direction:column;gap:.8rem}
-  .step+.step{padding-left:1.6rem;border-left:1px solid var(--line)}
-  .step .n{font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--gold)}
-  .step h3{font-size:1.1rem;font-weight:600}
-  .step p{margin:0;font-size:.95rem;line-height:1.65;color:var(--body)}
+  .slip{position:relative;padding:32px;border-left:2px dashed var(--ink);display:flex;flex-direction:column;gap:22px}
+  .slip-h{display:flex;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:10px}
+  .line{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px dashed var(--rule)}
+  .line .k{font-size:14px;color:var(--grey)}
+  .line .v{font-family:var(--cond);font-weight:800;font-size:28px;font-variant-numeric:tabular-nums}
+  .line .v s{text-decoration-thickness:3px}
+  .line.main{border-bottom:2px solid var(--ink);padding:14px 0}
+  .line.main .k{font-family:var(--cond);font-weight:800;font-size:18px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+  .line.main .v{font-size:clamp(52px,6vw,76px);font-weight:900;line-height:.9}
+  .line.main .v small{font-size:22px;font-weight:800}
+  .stamp{display:inline-block;margin-top:14px;transform:rotate(-7deg);transform-origin:left center;border:4px double var(--gold-ink);color:var(--gold-ink);padding:5px 10px 3px;text-align:center;font-family:var(--cond);font-weight:900;line-height:.95;text-transform:uppercase;opacity:.92;pointer-events:none}
+  .stamp b{display:block;font-size:38px}
+  .line.main .k{display:flex;flex-direction:column;align-items:flex-start}
+  .stamp span{font-size:12px;letter-spacing:.14em}
+  .stamp.thump{animation:thump .45s cubic-bezier(.3,1.6,.5,1)}
+  @keyframes thump{0%{transform:rotate(-7deg) scale(1.6);opacity:0}100%{transform:rotate(-7deg) scale(1);opacity:.92}}
+  .save{font-size:17px}
+  .save strong{font-weight:700;background:var(--gold);padding:0 4px}
+  .after{border:2px solid var(--ink);padding:16px;display:flex;flex-direction:column;gap:10px;font-size:15px}
+  .after b{font-family:var(--cond);font-weight:800;font-size:17px;letter-spacing:.06em;text-transform:uppercase}
+  .after strong{font-weight:700}
+  .after .chip{min-height:38px;font-size:14px;padding:0 10px}
+  .slip .act{width:100%}
+  .note{font-size:12.5px;line-height:1.5;color:var(--grey)}
 
-  /* categorias */
-  .cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
-  .cat{position:relative;overflow:hidden;background:var(--white);border:1px solid var(--line);border-radius:22px;padding:1.8rem;display:flex;flex-direction:column;gap:1rem;min-height:16rem;transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s}
-  .cat:hover{transform:translateY(-6px);border-color:transparent;box-shadow:0 30px 60px -30px rgba(15,30,51,.35)}
-  .cat .ico{width:48px;height:48px;border-radius:14px;background:var(--paper);display:flex;align-items:center;justify-content:center;transition:background .5s}
-  .cat:hover .ico{background:var(--navy)}
-  .cat:hover .ico svg{stroke:var(--gold-2)}
-  .card-title{font-size:1.25rem;font-weight:600}
-  .cat p{margin:0;font-size:.94rem;line-height:1.6;color:var(--body)}
-  .cat .go{margin-top:auto;display:flex;align-items:center;gap:8px;font-size:.88rem;font-weight:600;color:var(--navy)}
-  .cat .go .arr{transition:transform .4s var(--ease)}
-  .cat:hover .go .arr{transform:translateX(5px)}
+  /* calendário do consórcio (passos) */
+  .cal{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+  .cal div{padding:22px 22px 0 0}
+  .cal div+div{padding-left:22px;border-left:2px solid var(--ink)}
+  .cal .when{font-family:var(--cond);font-weight:900;font-size:64px;line-height:.9;text-transform:uppercase}
+  .cal h3{font-weight:700;font-size:18px;margin:14px 0 6px}
+  .cal p{color:var(--grey);font-size:16px}
+
+  /* lista de bens */
+  .list{border-top:2px solid var(--ink)}
+  .row{display:grid;grid-template-columns:1fr 1.4fr auto;gap:24px;align-items:center;padding:22px 12px;border-bottom:2px solid var(--ink);text-decoration:none;transition:background .2s,padding .25s}
+  .row .n{font-family:var(--cond);font-weight:900;font-size:clamp(40px,5vw,64px);line-height:.9;text-transform:uppercase}
+  .row p{color:var(--grey)}
+  .row .go{font-family:var(--cond);font-weight:800;font-size:18px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+  .row:hover{background:var(--gold);padding-left:24px}
+  .row:hover p{color:var(--ink)}
 
   /* comparativo */
-  .vs-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:var(--white)}
-  .vs-col{padding:2.4rem}
-  .vs-col h3{font-size:1rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.6rem;display:flex;align-items:center;gap:10px}
-  .vs-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.1rem}
-  .vs-col li{display:flex;gap:12px;line-height:1.5}
-  .vs-col li::before{content:"";flex:none;width:18px;height:1px;margin-top:.75em}
-  .vs-col.bad{color:var(--muted)}
-  .vs-col.bad li::before{background:var(--soft)}
-  .vs-col.good{background:var(--night);color:var(--cream)}
-  .vs-col.good li::before{background:var(--gold-2)}
-  .vs-col.good h3{color:var(--gold-2)}
+  .vs{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink)}
+  .vs>div{padding:30px}
+  .vs>div+div{border-left:2px solid var(--ink);background:var(--gold)}
+  .vs h3{font-family:var(--cond);font-weight:900;font-size:36px;text-transform:uppercase;margin-bottom:14px}
+  .vs ul{margin:0;padding:0;list-style:none}
+  .vs li{padding:12px 0;border-top:1px solid var(--rule);font-size:17px}
+  .vs li:first-child{border-top:0}
+  .vs .no li{color:var(--grey);text-decoration:line-through;text-decoration-color:rgba(15,30,51,.35)}
 
   /* por que */
-  .why{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem}
-  .why-list{display:flex;flex-direction:column}
-  .why-item{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;padding:1.6rem 0;border-top:1px solid var(--line)}
-  .why-item:last-child{border-bottom:1px solid var(--line)}
-  .why-item .dot{width:10px;height:10px;margin-top:.45rem}
-  .why-item h3{font-size:1.1rem;font-weight:600;margin-bottom:.35rem}
-  .why-item p{margin:0;line-height:1.65;color:var(--body)}
+  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+  .why div{padding:24px 24px 0 0}
+  .why div+div{padding-left:24px;border-left:2px solid var(--ink)}
+  .why h3{font-family:var(--cond);font-weight:900;font-size:32px;line-height:.95;text-transform:uppercase;margin-bottom:10px}
+  .why p{color:var(--grey)}
 
-  /* final */
-  .final{position:relative;overflow:hidden;background:var(--night);color:var(--cream);text-align:center}
-  .final::before{content:"";position:absolute;left:50%;top:50%;width:700px;height:700px;margin:-350px 0 0 -350px;background:radial-gradient(closest-side,rgba(200,150,47,.18),transparent 70%);pointer-events:none}
-  .final .wrap{position:relative;padding-top:8rem;padding-bottom:8rem;display:flex;flex-direction:column;align-items:center;gap:2rem}
-  .final h2{font-size:clamp(2.2rem,4.6vw,4rem);max-width:46rem;line-height:1.04}
-  .final h2 .it{color:var(--gold-2)}
-  .one{position:relative;width:18px;height:18px;border-radius:50%;background:var(--gold-2)}
-  .one::after{content:"";position:absolute;inset:0;border-radius:50%;animation:ping 2.4s ease-out infinite}
-  .final .hero-ctas{justify-content:center}
-  .final small{font-size:.88rem;color:var(--soft)}
+  /* fecho */
+  .end{background:var(--ink);color:var(--paper)}
+  .end .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:48px;align-items:end;padding-top:96px;padding-bottom:96px}
+  .end h2{max-width:none;color:var(--paper)}
+  .end h2 em{font-style:normal;color:var(--gold)}
+  .end .side{display:flex;flex-direction:column;gap:12px}
+  .end .act.ghost{color:var(--paper);border-color:var(--paper)}
+  .end .act.ghost:hover{background:var(--paper);color:var(--ink)}
+  .end small{font-size:14px;opacity:.75}
 
   /* rodapé */
-  footer{background:var(--cream)}
-  footer .wrap{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;justify-content:space-between;padding-top:2.8rem;padding-bottom:2.8rem;font-size:.88rem;color:var(--muted)}
-  .f-mail{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--navy)}
-  .f-social{display:flex;gap:10px}
-  .f-social a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;font-weight:600;color:var(--navy);background:var(--white);transition:border-color .3s}
-  .f-social a:hover,.f-mail:hover{border-color:var(--gold);color:var(--navy-2)}
-  .legal{flex:1 1 100%;margin:0;font-size:.76rem;line-height:1.6;color:var(--muted);max-width:60rem}
-  .legal:first-of-type{border-top:1px solid var(--line);padding-top:1.5rem}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;justify-content:space-between;padding-top:36px;padding-bottom:36px;font-size:14px;color:var(--grey)}
+  .f-mail{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--ink)}
+  .f-social{display:flex;gap:8px}
+  .f-social a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:2px solid var(--ink);font-weight:600;color:var(--ink);text-decoration:none}
+  .f-social a:hover{background:var(--gold)}
+  .legal{flex:1 1 100%;font-size:12.5px;line-height:1.6;max-width:62rem}
+  .legal:first-of-type{border-top:2px solid var(--ink);padding-top:20px}
 
-  /* WhatsApp flutuante */
-  .float{position:fixed;right:20px;bottom:20px;z-index:25;width:58px;height:58px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px -10px rgba(11,23,41,.6);transform:scale(0);transition:transform .5s var(--ease)}
-  .float.show{transform:none}
-  .float .dot{width:20px;height:20px;box-shadow:0 0 0 0 rgba(226,184,92,.5);animation:ping 2.4s ease-out infinite}
+  /* WhatsApp fixo no celular */
+  .float{position:fixed;right:16px;bottom:16px;z-index:20;display:none;align-items:center;gap:8px;min-height:50px;padding:0 16px;background:var(--ink);color:var(--gold);border:2px solid var(--gold);font-weight:700;text-decoration:none}
 
   @media (max-width:980px){
-    .hero .wrap,.sim,.why{grid-template-columns:1fr}
-    .hero .wrap{gap:3rem}
-    .sim-in{position:static}
-    .steps-row,.cats{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .step:nth-child(3){padding-left:0;border-left:0}
-    .band .wrap{grid-template-columns:repeat(2,auto)}
+    .hero .wrap,.sim,.end .wrap{grid-template-columns:minmax(0,1fr)}
+    .seg button{min-width:0;overflow-wrap:anywhere}
+    .form{position:static}
+    .slip{border-left:0;border-top:2px dashed var(--ink)}
+    .sh{grid-template-columns:1fr;gap:14px}
+    .cal,.why{grid-template-columns:1fr 1fr}
+    .cal div:nth-child(3),.why div:nth-child(3){padding-left:0;border-left:0}
   }
   @media (max-width:640px){
-    .nav nav{display:none}
-    .hero{padding-top:7rem;padding-bottom:4rem}
-    .hero-ctas .btn{width:100%}
-    .demo,.sim-in,.sim-out{padding:1.5rem;border-radius:22px}
-    .section{padding-top:5rem;padding-bottom:5rem}
-    .band .wrap{grid-template-columns:1fr}
-    .tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .mode button{font-size:.82rem;padding:.6rem .4rem}
-    .money input{font-size:2rem}
-    .rows{grid-template-columns:1fr 1fr}
-    .steps-row,.cats,.vs-grid{grid-template-columns:1fr}
-    .step,.step+.step{padding:1.6rem 0 0;border-left:0}
-    .step+.step{border-top:1px solid var(--line);margin-top:1.6rem}
-    .vs-col{padding:1.8rem}
-    .hero .eyebrow{letter-spacing:.1em;font-size:.68rem}
-    .big50{font-size:4.6rem}
-    .demo-top{align-items:center}
-    .badge{position:static;display:block;font-size:2rem;margin-bottom:.4rem}
-    .big{font-size:2.5rem}
-    body{padding-bottom:84px}
+    body{font-size:16px;padding-bottom:76px}
+    .wrap{padding:0 18px}
+    .bar nav{display:none}
+    .hero .wrap{padding-top:36px;gap:36px}
+    .kicker{flex-wrap:wrap}
+    .act{width:100%}
+    .bar .act{width:auto}
+    .grid{grid-template-columns:repeat(6,1fr)}
+    .grid .c:nth-child(n+31){display:none}
+    .sec{padding:64px 0}
+    .form,.slip{padding:20px}
+    .seg{grid-template-columns:1fr 1fr}
+    .seg button:nth-child(2){border-right:0}
+    .seg button:nth-child(-n+2){border-bottom:2px solid var(--ink)}
+    .seg.two button{border-bottom:0}
+    .seg.two button:first-child{border-right:2px solid var(--ink)}
+    .money input{font-size:48px}
+    .stamp b{font-size:30px}
+    .line.main{grid-template-columns:minmax(0,1fr)}
+    .line.main .v{font-size:clamp(44px,15vw,64px)}
+    .line .v{font-size:24px}
+    .cal,.why,.vs{grid-template-columns:1fr}
+    .cal div,.cal div+div,.why div,.why div+div{padding:20px 0;border-left:0;border-bottom:2px solid var(--ink)}
+    .vs>div+div{border-left:0;border-top:2px solid var(--ink)}
+    .row{grid-template-columns:1fr auto;gap:6px 16px}
+    .row p{grid-column:1/-1;grid-row:2}
+    .float{display:flex;transform:translateY(140%);transition:transform .3s}
+    .float.show{transform:none}
+    h1 .s{font-size:clamp(34px,10vw,52px)}
   }
   @media (prefers-reduced-motion:reduce){
-    *,*::before,*::after{animation:none!important;transition:none!important}
-    h1 .line>span,.fade,.reveal,.stagger>*{opacity:1!important;transform:none!important}
-    .demo .big50{opacity:1;transform:none}
-    .demo .fill.full{width:100%}.demo .fill.half{width:50%}
+    *{animation:none!important;transition:none!important}
   }
 </style>
 </head>
 <body>
 
-<header id="top">
-  <div class="wrap nav">
+<header>
+  <div class="wrap bar">
     <a class="logo" href="#topo" aria-label="Singular Invest, voltar ao topo">
       <svg width="30" height="30" viewBox="0 0 72 72" aria-hidden="true">
-        <g fill="currentColor" fill-opacity=".3">
-          <circle cx="14" cy="14" r="6"/><circle cx="36" cy="14" r="6"/>
-          <circle cx="14" cy="36" r="6"/><circle cx="36" cy="36" r="6"/><circle cx="58" cy="36" r="6"/>
-          <circle cx="14" cy="58" r="6"/><circle cx="36" cy="58" r="6"/><circle cx="58" cy="58" r="6"/>
-        </g>
-        <circle cx="58" cy="14" r="9" fill="#C8962F"/>
+        <g fill="#0F1E33" fill-opacity=".35"><circle cx="14" cy="14" r="6"/><circle cx="36" cy="14" r="6"/><circle cx="14" cy="36" r="6"/><circle cx="36" cy="36" r="6"/><circle cx="58" cy="36" r="6"/><circle cx="14" cy="58" r="6"/><circle cx="36" cy="58" r="6"/><circle cx="58" cy="58" r="6"/></g>
+        <circle cx="58" cy="14" r="9" fill="#0F1E33"/>
       </svg>
-      <span class="word"><b style="font-size:1.4rem">s<span class="i">ı</span>ngular</b><small style="font-size:.52rem">invest</small></span>
+      <span><b>s<span class="i">ı</span>ngular</b><small>invest</small></span>
     </a>
     <nav aria-label="Principal">
       <a href="#simulador">Simulador</a>
       <a href="#como">Como funciona</a>
-      <a href="#categorias">O que dá pra comprar</a>
+      <a href="#bens">O que dá pra comprar</a>
       <a href="#comparativo">Consórcio x financiamento</a>
     </nav>
-    <a class="btn btn-gold" href="#simulador">Simular <span class="arr" aria-hidden="true">→</span></a>
+    <a class="act" href="#simulador">Simular <span class="ar" aria-hidden="true">→</span></a>
   </div>
 </header>
 
@@ -312,258 +272,192 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <p class="eyebrow fade">Representante autorizado Embracon</p>
+        <div class="kicker tag"><span>Representante autorizado Embracon</span></div>
         <h1>
-          <span class="line"><span>Sua parcela,</span></span>
-          <span class="line"><span><span class="it">pela metade</span></span></span>
-          <span class="line"><span>até a contemplação.</span></span>
+          <span class="s">Pague</span>
+          <span class="xl">Metade</span>
+          <span class="s">da parcela até a sua cota ser contemplada.</span>
         </h1>
-        <p class="hero-lead fade d1">Consórcio de imóvel, carro ou caminhão com parcela 50% menor enquanto a sua carta não sai. Sem juros, com estratégia feita para o seu sonho.</p>
-        <div class="hero-ctas fade d2">
-          <a class="btn btn-gold" href="#simulador">Clique e simule a sua parcela <span class="arr" aria-hidden="true">→</span></a>
-        </div>
+        <p class="lede">Consórcio de imóvel, carro ou caminhão. Enquanto a sua carta de crédito não sai, você paga 50% da parcela. Sem juros.</p>
+        <a class="act" href="#simulador">Simular minha parcela <span class="ar" aria-hidden="true">→</span></a>
       </div>
 
-      <div class="demo fade d3" id="demo" aria-label="Exemplo: parcela de R$ 2.033,33 no mercado contra R$ 1.016,67 na Singular">
-        <div class="demo-top">
-          <div>
-            <p class="demo-k" style="margin:0 0 .6rem">Exemplo real do simulador</p>
-            <p style="margin:0;font-size:.9rem;color:#C9D0DB">Carta de R$ 300 mil em 180 meses</p>
-          </div>
-          <p class="big50" style="margin:0">−50<small>%</small></p>
+      <div class="board" role="img" aria-label="Painel da assembleia: um número é sorteado entre as cotas do grupo">
+        <div class="board-h tag"><span>Assembleia do grupo</span><span class="live"><i aria-hidden="true"></i>Sorteio</span></div>
+        <div class="grid" id="grid"></div>
+        <div class="board-f">
+          <span class="big" id="draw-n">—</span>
+          <p id="draw-t">Todo mês tem assembleia. Até a sua cota sair, a sua parcela é a metade.</p>
         </div>
-        <div class="bars">
-          <div class="bar-row">
-            <div class="bar-h"><span>Plano comum de mercado</span><b class="strike">R$ 2.033,33</b></div>
-            <div class="track"><div class="fill full"></div></div>
-          </div>
-          <div class="bar-row">
-            <div class="bar-h"><span style="color:var(--gold-2)">Com a Singular, até a contemplação</span><b id="demo-n">R$ 2.033,33</b></div>
-            <div class="track"><div class="fill half"></div></div>
-          </div>
-        </div>
-        <p class="demo-foot"><span>Sobra R$ 1.016,67 no seu bolso, todo mês.</span><a href="#simulador">Simular o meu →</a></p>
       </div>
     </div>
   </section>
 
-  <section class="band" aria-label="Vantagens">
+  <div class="strip" aria-label="Vantagens">
     <div class="wrap">
-      <p><span class="dot" style="width:6px;height:6px"></span><span><b>Parcela 50% menor</b> até a contemplação</span></p>
-      <p><span class="dot" style="width:6px;height:6px"></span>Zero juros</p>
-      <p><span class="dot" style="width:6px;height:6px"></span>Compra à vista quando sair</p>
-      <p><span class="dot" style="width:6px;height:6px"></span>Lance para adiantar</p>
+      <span><b>50% da parcela</b> até a contemplação</span>
+      <span>Zero juros</span>
+      <span>Compra à vista</span>
+      <span>Lance para adiantar</span>
     </div>
-  </section>
+  </div>
 
-  <section id="simulador" class="section">
+  <section id="simulador" class="sec">
     <div class="wrap">
-      <div class="head reveal">
-        <p class="eyebrow">Simulador · só na Singular</p>
-        <h2>Veja quanto sobra no seu bolso <span class="it">todo mês.</span></h2>
-        <p>Escolha o bem, ajuste o valor e compare. Gostou? Mande a simulação para a gente no WhatsApp com um toque.</p>
+      <div class="sh">
+        <span class="tag">Simulador</span>
+        <div>
+          <h2>Quanto fica o seu carnê</h2>
+          <p>Escolha o bem e o valor. O carnê ao lado mostra a parcela na Singular e a do plano comum. Depois, envie para a gente pelo WhatsApp.</p>
+        </div>
       </div>
 
-      <div class="sim reveal">
-        <div class="sim-in">
+      <div class="sim">
+        <div class="form">
           <div>
-            <span class="lbl" id="lbl-tipo">O que você quer comprar?</span>
-            <div class="tabs" role="group" aria-labelledby="lbl-tipo" id="sim-tabs">
-              <button type="button" class="tab" data-cat="imovel" aria-pressed="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10"/></svg>Imóvel</button>
-              <button type="button" class="tab" data-cat="veiculo" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16h14M3 16v-3l2-5h14l2 5v3M7 16v2M17 16v2"/></svg>Veículo</button>
-              <button type="button" class="tab" data-cat="pesados" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h12v9H2zM14 10h4l3 3v3h-7"/></svg>Pesados</button>
-              <button type="button" class="tab" data-cat="servicos" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg>Serviços</button>
+            <span class="lbl" id="lbl-tipo">O que você quer comprar</span>
+            <div class="seg" role="group" aria-labelledby="lbl-tipo" id="sim-tabs">
+              <button type="button" class="tab" data-cat="imovel" aria-pressed="true">Imóvel</button>
+              <button type="button" class="tab" data-cat="veiculo" aria-pressed="false">Veículo</button>
+              <button type="button" class="tab" data-cat="pesados" aria-pressed="false">Pesados</button>
+              <button type="button" class="tab" data-cat="servicos" aria-pressed="false">Serviços</button>
             </div>
           </div>
-
           <div>
             <span class="lbl" id="lbl-mode">Simular por</span>
-            <div class="mode" role="group" aria-labelledby="lbl-mode" id="sim-mode" data-active="credito">
+            <div class="seg two" role="group" aria-labelledby="lbl-mode" id="sim-mode">
               <button type="button" data-mode="credito" aria-pressed="true">Valor do bem</button>
               <button type="button" data-mode="parcela" aria-pressed="false">Parcela que cabe no bolso</button>
             </div>
           </div>
-
           <div>
             <label class="lbl" for="sim-valor" id="sim-valor-lbl">Valor do crédito</label>
             <div class="money"><span>R$</span><input id="sim-valor" inputmode="numeric" autocomplete="off"></div>
             <input type="range" id="sim-range" aria-labelledby="sim-valor-lbl">
-            <div class="range-ends"><span id="sim-min"></span><span id="sim-max"></span></div>
+            <div class="ends"><span id="sim-min"></span><span id="sim-max"></span></div>
           </div>
-
           <div>
-            <span class="lbl" id="lbl-prazo">Em quantos meses?</span>
+            <span class="lbl" id="lbl-prazo">Prazo</span>
             <div class="chips" role="group" aria-labelledby="lbl-prazo" id="sim-prazos"></div>
           </div>
         </div>
 
-        <div class="sim-out" aria-live="polite">
-          <div>
-            <span class="badge" aria-hidden="true">−50%</span>
-            <span class="out-k" id="out-titulo">Com a Singular</span>
-            <p class="big" id="out-big">R$ 1.016,67 <small>/mês</small></p>
-            <p class="sub" id="out-sub">até a contemplação</p>
-          </div>
+        <div class="slip" aria-live="polite">
+          <div class="slip-h tag"><span>Carnê Singular</span><span id="slip-cat">Imóvel</span></div>
 
-          <div class="cmp" aria-hidden="true">
-            <div class="bar-row">
-              <div class="bar-h"><span id="cmp-a-l">Plano comum</span><b class="strike" id="out-cheia">R$ 2.033,33</b></div>
-              <div class="track"><div class="fill full" id="cmp-a" style="width:100%"></div></div>
-            </div>
-            <div class="bar-row">
-              <div class="bar-h"><span id="cmp-b-l" style="color:var(--gold-2)">Singular</span><b id="cmp-b-n">R$ 1.016,67</b></div>
-              <div class="track"><div class="fill half" id="cmp-b" style="width:50%"></div></div>
-            </div>
-          </div>
+          <div class="line main"><span class="k"><span id="out-titulo">Sua parcela</span><span class="stamp" id="stamp" aria-hidden="true"><b>−50%</b><span>até a contemplação</span></span></span><span class="v" id="out-big">R$ 1.016,67</span></div>
+          <div class="line"><span class="k" id="out-cheia-sub">Parcela no plano comum</span><span class="v" id="out-cheia"><s>R$ 2.033,33</s></span></div>
+          <div class="line"><span class="k">Crédito</span><span class="v" id="out-credito"></span></div>
+          <div class="line"><span class="k">Prazo · taxa de administração</span><span class="v"><span id="out-prazo"></span> · <span id="out-taxa"></span></span></div>
 
           <p class="save" id="out-save">Sobra <strong>R$ 1.016,67</strong> no seu bolso todo mês até a carta sair.</p>
 
-          <dl class="rows">
-            <div><dt>Crédito</dt><dd id="out-credito"></dd></div>
-            <div><dt>Prazo</dt><dd id="out-prazo"></dd></div>
-            <div><dt>Taxa adm.</dt><dd id="out-taxa"></dd></div>
-          </dl>
-
           <div class="after" id="out-vs">
-            <b>E depois que eu for contemplado?</b>
+            <b>E depois da contemplação?</b>
             <span>A metade que você não pagou volta diluída nas parcelas que faltam. Escolha o mês:</span>
-            <div class="chips mini" role="group" aria-label="Mês da contemplação" id="sim-contem"></div>
+            <div class="chips" role="group" aria-label="Mês da contemplação" id="sim-contem"></div>
             <span id="out-depois"></span>
           </div>
 
-          <a class="btn btn-gold" id="sim-wa" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Quero%20pagar%20metade%20da%20parcela%20at%C3%A9%20a%20contempla%C3%A7%C3%A3o." target="_blank" rel="noopener">Enviar simulação no WhatsApp <span class="arr" aria-hidden="true">→</span></a>
+          <a class="act" id="sim-wa" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Quero%20pagar%20metade%20da%20parcela%20at%C3%A9%20a%20contempla%C3%A7%C3%A3o." target="_blank" rel="noopener">Enviar este carnê no WhatsApp <span class="ar" aria-hidden="true">→</span></a>
           <p class="note">Simulação estimada. Parcela 50% menor até a contemplação; depois dela, a diferença é diluída nas parcelas restantes. Não inclui seguro nem correção do crédito. Valores finais conforme a tabela vigente da Embracon na contratação.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="como" class="section">
+  <section id="como" class="sec" style="padding-top:0">
     <div class="wrap">
-      <div class="head reveal">
-        <p class="eyebrow">Como funciona</p>
-        <h2>Do plano à chave na mão, <span class="it">a quatro mãos.</span></h2>
+      <div class="sh">
+        <span class="tag">Como funciona</span>
+        <h2>O calendário do seu plano</h2>
       </div>
-      <div class="steps-row stagger">
-        <div class="step"><span class="n">1</span><h3>Montamos o seu plano</h3><p>Valor, prazo e parcela desenhados em cima do que você quer comprar.</p></div>
-        <div class="step"><span class="n">2</span><h3>Você paga metade</h3><p>Parcela 50% menor, sem juros, até a sua carta sair.</p></div>
-        <div class="step"><span class="n">3</span><h3>É contemplado</h3><p>Por sorteio ou lance. A gente acompanha cada assembleia com você.</p></div>
-        <div class="step"><span class="n">4</span><h3>Compra à vista</h3><p>Com a carta na mão, você negocia como quem paga à vista.</p></div>
+      <div class="cal">
+        <div><span class="when">Hoje</span><h3>A gente monta o plano</h3><p>Valor, prazo e parcela feitos em cima do que você quer comprar.</p></div>
+        <div><span class="when">Todo mês</span><h3>Você paga metade</h3><p>Parcela 50% menor, sem juros, enquanto a carta não sai.</p></div>
+        <div><span class="when">Assembleia</span><h3>Sua cota é contemplada</h3><p>Por sorteio ou lance. A gente acompanha cada assembleia com você.</p></div>
+        <div><span class="when">Depois</span><h3>Você compra à vista</h3><p>Com a carta na mão, negocia como quem paga à vista.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="categorias" class="section" style="padding-top:0">
+  <section id="bens" class="sec" style="padding-top:0">
     <div class="wrap">
-      <div class="head reveal">
-        <p class="eyebrow">O que dá pra comprar</p>
-        <h2>Escolha o seu ponto de partida.</h2>
+      <div class="sh">
+        <span class="tag">O que dá pra comprar</span>
+        <h2>Escolha e simule</h2>
       </div>
-      <div class="cats stagger">
-        <a class="cat" href="#simulador" data-cat="imovel">
-          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"/></svg></span>
-          <span class="card-title">Imóveis</span>
-          <p>Casa, apartamento, terreno ou reforma.</p>
-          <span class="go">Simular imóvel <span class="arr" aria-hidden="true">→</span></span>
-        </a>
-        <a class="cat" href="#simulador" data-cat="veiculo">
-          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16h14M3 16v-3l2-5h14l2 5v3M7 16v2M17 16v2M6.5 12h.01M17.5 12h.01"/></svg></span>
-          <span class="card-title">Veículos</span>
-          <p>Carro novo ou seminovo, pagando à vista.</p>
-          <span class="go">Simular veículo <span class="arr" aria-hidden="true">→</span></span>
-        </a>
-        <a class="cat" href="#simulador" data-cat="pesados">
-          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h12v9H2zM14 10h4l3 3v3h-7M6 19a2 2 0 100-4 2 2 0 000 4zM17 19a2 2 0 100-4 2 2 0 000 4z"/></svg></span>
-          <span class="card-title">Pesados</span>
-          <p>Caminhão, máquina ou trator para crescer.</p>
-          <span class="go">Simular pesados <span class="arr" aria-hidden="true">→</span></span>
-        </a>
-        <a class="cat" href="#simulador" data-cat="servicos">
-          <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F1E33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg></span>
-          <span class="card-title">Serviços</span>
-          <p>Viagem, curso, festa ou cirurgia.</p>
-          <span class="go">Simular serviços <span class="arr" aria-hidden="true">→</span></span>
-        </a>
+      <div class="list">
+        <a class="row" href="#simulador" data-cat="imovel"><span class="n">Imóveis</span><p>Casa, apartamento, terreno ou reforma.</p><span class="go">Simular →</span></a>
+        <a class="row" href="#simulador" data-cat="veiculo"><span class="n">Veículos</span><p>Carro novo ou seminovo, pagando à vista.</p><span class="go">Simular →</span></a>
+        <a class="row" href="#simulador" data-cat="pesados"><span class="n">Pesados</span><p>Caminhão, máquina ou trator para crescer.</p><span class="go">Simular →</span></a>
+        <a class="row" href="#simulador" data-cat="servicos"><span class="n">Serviços</span><p>Viagem, curso, festa ou cirurgia.</p><span class="go">Simular →</span></a>
       </div>
     </div>
   </section>
 
-  <section id="comparativo" class="section" style="background:var(--paper)">
+  <section id="comparativo" class="sec" style="padding-top:0">
     <div class="wrap">
-      <div class="head reveal">
-        <p class="eyebrow">Consórcio x financiamento</p>
-        <h2>No financiamento, você paga o bem <span class="it">e mais um pedaço dele</span> para o banco.</h2>
-      </div>
-      <div class="vs-grid reveal">
-        <div class="vs-col bad">
-          <h3>Financiamento</h3>
-          <ul><li>Juros todo mês, do primeiro ao último</li><li>No fim, paga bem mais que o preço do bem</li><li>Entrada pesada logo de cara</li></ul>
-        </div>
-        <div class="vs-col good">
-          <h3><span class="dot" style="width:8px;height:8px"></span>Consórcio Singular</h3>
-          <ul><li>Zero juros, só a taxa de administração</li><li>Parcela 50% menor até a contemplação</li><li>Seu dinheiro vira poder de compra à vista</li></ul>
+      <div class="sh">
+        <span class="tag">Consórcio x financiamento</span>
+        <div>
+          <h2>Pare de pagar juros pro banco</h2>
+          <p>No financiamento, você paga o bem e mais um pedaço dele em juros.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap why">
-      <div class="reveal">
-        <p class="eyebrow">Por que a Singular</p>
-        <h2>Aqui você não é <span class="it">mais um na fila.</span></h2>
-      </div>
-      <div class="why-list stagger">
-        <div class="why-item"><span class="dot"></span><div><h3>Atendimento um a um</h3><p>Você fala com gente de verdade, do primeiro oi até a contemplação.</p></div></div>
-        <div class="why-item"><span class="dot"></span><div><h3>Plano feito para você</h3><p>Nada de pacote pronto. Valor, prazo e estratégia seguem o seu objetivo.</p></div></div>
-        <div class="why-item"><span class="dot"></span><div><h3>A força da Embracon por trás</h3><p>Uma das maiores administradoras de consórcio do Brasil, fiscalizada pelo Banco Central.</p></div></div>
+      <div class="vs">
+        <div class="no"><h3>Financiamento</h3><ul><li>Juros todo mês, do primeiro ao último</li><li>No fim, paga bem mais que o preço do bem</li><li>Entrada pesada logo de cara</li></ul></div>
+        <div><h3>Consórcio Singular</h3><ul><li>Zero juros, só a taxa de administração</li><li>Metade da parcela até a contemplação</li><li>Seu dinheiro vira poder de compra à vista</li></ul></div>
       </div>
     </div>
   </section>
 
-  <section class="final">
-    <div class="wrap reveal">
-      <span class="one" aria-hidden="true"></span>
-      <h2>Entre tantos caminhos, o seu começa <span class="it">num ponto só.</span></h2>
-      <div class="hero-ctas">
-        <a class="btn btn-gold" href="#simulador">Clique e simule <span class="arr" aria-hidden="true">→</span></a>
-        <a class="btn btn-line js-wa" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20montar%20meu%20plano%20de%20cons%C3%B3rcio." target="_blank" rel="noopener">Falar no WhatsApp</a>
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="sh">
+        <span class="tag">Por que a Singular</span>
+        <h2>Você não é mais uma cota</h2>
       </div>
-      <small>(11) 97086-5407 · resposta rápida</small>
+      <div class="why">
+        <div><h3>Gente de verdade</h3><p>Você fala com quem monta o seu plano, do primeiro oi até a contemplação.</p></div>
+        <div><h3>Plano sob medida</h3><p>Valor, prazo e estratégia de lance seguem o seu objetivo, não um pacote pronto.</p></div>
+        <div><h3>Força da Embracon</h3><p>Uma das maiores administradoras de consórcio do Brasil, fiscalizada pelo Banco Central.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="end">
+    <div class="wrap">
+      <h2>Entre tantas cotas, a sua começa <em>agora.</em></h2>
+      <div class="side">
+        <a class="act on-ink" href="#simulador">Simular minha parcela <span class="ar" aria-hidden="true">→</span></a>
+        <a class="act ghost js-wa" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20montar%20meu%20plano%20de%20cons%C3%B3rcio." target="_blank" rel="noopener">Falar no WhatsApp <span class="ar" aria-hidden="true">→</span></a>
+        <small>(11) 97086-5407</small>
+      </div>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span class="word" style="color:var(--navy)"><b style="font-size:1.15rem">s<span class="i">ı</span>ngular invest</b></span>
+    <span class="logo" style="color:var(--ink)"><span><b>s<span class="i">ı</span>ngular invest</b></span></span>
     <span>Representante autorizado Embracon</span>
-    <a class="f-mail" href="mailto:comercial@singularinvest.com.br">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-      comercial@singularinvest.com.br
-    </a>
+    <a class="f-mail" href="mailto:comercial@singularinvest.com.br">comercial@singularinvest.com.br</a>
     <nav class="f-social" aria-label="Redes sociais">
-      <a href="https://www.instagram.com/singular.invest/" target="_blank" rel="noopener" aria-label="Instagram da Singular Invest">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>
-        Instagram
-      </a>
-      <a href="https://www.linkedin.com/company/singular-invest/" target="_blank" rel="noopener" aria-label="LinkedIn da Singular Invest">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>
-        LinkedIn
-      </a>
+      <a href="https://www.instagram.com/singular.invest/" target="_blank" rel="noopener" aria-label="Instagram da Singular Invest">Instagram ↗</a>
+      <a href="https://www.linkedin.com/company/singular-invest/" target="_blank" rel="noopener" aria-label="LinkedIn da Singular Invest">LinkedIn ↗</a>
     </nav>
     <p class="legal">Singular Invest é uma marca de Barrionuevo Soluções Financeiras LTDA, CNPJ 43.871.760/0001-87, representante autorizada da Embracon Administradora de Consórcio. A administração dos grupos de consórcio é feita pela Embracon, autorizada e fiscalizada pelo Banco Central do Brasil. As simulações deste site são estimativas e não garantem contemplação, que acontece por sorteio ou lance, conforme as regras do grupo. Valores, taxas e condições, incluindo a parcela reduzida até a contemplação, seguem a tabela vigente da Embracon na data da contratação.</p>
     <p class="legal">© 2026 Singular Invest · Todos os direitos reservados.</p>
   </div>
 </footer>
 
-<a class="float js-wa" id="float" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20montar%20meu%20plano%20de%20cons%C3%B3rcio." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><span class="dot"></span></a>
+<a class="float js-wa" href="https://wa.me/5511970865407?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Singular%20Invest%20e%20quero%20montar%20meu%20plano%20de%20cons%C3%B3rcio." target="_blank" rel="noopener">WhatsApp →</a>
 
 <script>
   function each(l,f){ Array.prototype.forEach.call(l,f); }
 
-  // Abre o WhatsApp direto, sem a página intermediária do wa.me:
-  // no computador → WhatsApp Web; no celular → app do WhatsApp.
+  // Abre o WhatsApp direto: no computador → WhatsApp Web; no celular → app.
   var EH_CELULAR = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
   function linkDireto(href){
     var m = href.match(/^https:\/\/wa\.me\/(\d+)(?:\?text=(.*))?$/);
@@ -579,84 +473,73 @@
     if (EH_CELULAR) window.location.href = url;
     else window.open(url, '_blank', 'noopener');
   });
-  // Número do WhatsApp (DDI 55 + DDD 11 + número)
   var WA = '5511970865407';
-
-  /* ============ ANIMAÇÕES ============ */
   var semMov = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var head = document.getElementById('top'), flt = document.getElementById('float');
-  function onScroll(){
-    var y = window.scrollY || 0;
-    head.classList.toggle('solid', y > 30);
-    flt.classList.toggle('show', y > 500);
-  }
+  var flt = document.querySelector('.float');
+  function onScroll(){ flt.classList.toggle('show', (window.scrollY||0) > window.innerHeight * 0.9); }
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
-  // revela ao rolar
-  var alvos = document.querySelectorAll('.reveal,.stagger');
-  if ('IntersectionObserver' in window && !semMov){
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold:.15, rootMargin:'0px 0px -40px 0px'});
-    each(alvos, function(el){ io.observe(el); });
-  } else { each(alvos, function(el){ el.classList.add('in'); }); }
-
-  // contador do cartão do topo: R$ 2.033,33 → R$ 1.016,67
-  function contar(el, de, ate, ms, atraso){
-    if (semMov){ el.textContent = brl(ate, true); return; }
-    setTimeout(function(){
-      var t0 = null;
-      function passo(t){
-        if (!t0) t0 = t;
-        var p = Math.min(1, (t - t0) / ms), e = 1 - Math.pow(1 - p, 3);
-        el.textContent = brl(de + (ate - de) * e, true);
-        if (p < 1) requestAnimationFrame(passo);
-      }
-      requestAnimationFrame(passo);
-    }, atraso);
+  /* ============ ASSEMBLEIA: sorteio de cotas no topo ============ */
+  var grid = document.getElementById('grid'), cotas = [];
+  var nums = [];
+  for (var k = 0; k < 40; k++){ nums.push(String(101 + k * 7)); }
+  nums.forEach(function(n){ var d = document.createElement('span'); d.className = 'c'; d.textContent = n; grid.appendChild(d); cotas.push(d); });
+  var visiveis = function(){ return cotas.filter(function(c){ return c.offsetParent !== null; }); };
+  function sortear(){
+    var vs = visiveis(); if (!vs.length) return;
+    each(cotas, function(c){ c.classList.remove('hit','win'); });
+    var alvo = Math.floor(Math.random() * vs.length), passos = 22, i = 0, atual = -1;
+    $('draw-n').textContent = '—';
+    $('draw-t').textContent = 'Sorteando a cota do mês…';
+    if (semMov){ vs[alvo].classList.add('win'); fim(vs[alvo]); return; }
+    (function gira(){
+      if (atual >= 0) vs[atual].classList.remove('hit');
+      if (i >= passos){ vs[alvo].classList.add('win'); fim(vs[alvo]); return; }
+      atual = i === passos - 1 ? alvo : Math.floor(Math.random() * vs.length);
+      vs[atual].classList.add('hit');
+      i++;
+      setTimeout(gira, 50 + i * i * 0.9);
+    })();
   }
-  setTimeout(function(){
-    document.getElementById('demo').classList.add('go');
-    contar(document.getElementById('demo-n'), 2033.33, 1016.67, 1800, 500);
-  }, 900);
+  function fim(c){
+    $('draw-n').textContent = c.textContent;
+    $('draw-t').textContent = 'Cota contemplada. Até a sua sair, você paga metade da parcela.';
+  }
+  setTimeout(sortear, 700);
+  if (!semMov) setInterval(sortear, 9000);
 
   /* ============ SIMULADOR ============
      AJUSTE AQUI com a tabela real da Embracon.
      taxa  = taxa de administração TOTAL do plano (0.18 = 18%)
      fundo = fundo de reserva TOTAL (0.02 = 2%)
-     juros = juros ao mês de um financiamento comum, só para comparar (0.012 = 1,2% a.m.)
+     juros = juros ao mês de um financiamento comum, só para comparar
   */
   var PLANOS = {
-    imovel:   { nome:'imóvel',   min:100000, max:1500000, passo:10000, inicial:300000, prazos:[150,180,200,220], taxa:0.20, fundo:0.02, juros:0.010 },
-    veiculo:  { nome:'veículo',  min:40000,  max:300000,  passo:5000,  inicial:90000,  prazos:[60,72,80,100],    taxa:0.16, fundo:0.02, juros:0.019 },
-    pesados:  { nome:'pesados',  min:150000, max:800000,  passo:10000, inicial:350000, prazos:[100,120],         taxa:0.16, fundo:0.02, juros:0.016 },
-    servicos: { nome:'serviços', min:15000,  max:40000,   passo:1000,  inicial:20000,  prazos:[24,36,40],        taxa:0.20, fundo:0.02, juros:0.040 }
+    imovel:   { nome:'imóvel',   rot:'Imóvel',   min:100000, max:1500000, passo:10000, inicial:300000, prazos:[150,180,200,220], taxa:0.20, fundo:0.02, juros:0.010 },
+    veiculo:  { nome:'veículo',  rot:'Veículo',  min:40000,  max:300000,  passo:5000,  inicial:90000,  prazos:[60,72,80,100],    taxa:0.16, fundo:0.02, juros:0.019 },
+    pesados:  { nome:'pesados',  rot:'Pesados',  min:150000, max:800000,  passo:10000, inicial:350000, prazos:[100,120],         taxa:0.16, fundo:0.02, juros:0.016 },
+    servicos: { nome:'serviços', rot:'Serviços', min:15000,  max:40000,   passo:1000,  inicial:20000,  prazos:[24,36,40],        taxa:0.20, fundo:0.02, juros:0.040 }
   };
-
-  // Parcela reduzida: quanto da parcela cheia o cliente paga até ser contemplado (0.5 = metade)
-  var REDUCAO = 0.5;
-  // Meses de contemplação usados no exemplo "e depois?"
+  var REDUCAO = 0.5;               // parcela reduzida até a contemplação (0.5 = metade)
   var MESES_EXEMPLO = [6, 12, 24, 48];
 
   var S = { cat:'imovel', mode:'credito', credito:PLANOS.imovel.inicial, prazo:PLANOS.imovel.prazos[1], contem:12 };
-  var $ = function(id){ return document.getElementById(id); };
+  function $(id){ return document.getElementById(id); }
   function brl(v, cents){ return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:cents?2:0,maximumFractionDigits:cents?2:0}); }
   var num = function(v){ return v.toLocaleString('pt-BR',{maximumFractionDigits:0}); };
   var pct = function(v){ return (v*100).toLocaleString('pt-BR',{maximumFractionDigits:1}) + '%'; };
 
   function plano(){ return PLANOS[S.cat]; }
   function fator(){ var p = plano(); return 1 + p.taxa + p.fundo; }
-  function parcelaDe(credito){ return credito * fator() / S.prazo; }
-  function creditoDe(parcela){ return parcela * S.prazo / fator(); }
+  function parcelaDe(c){ return c * fator() / S.prazo; }
+  function creditoDe(p){ return p * S.prazo / fator(); }
   function clamp(v,a,b){ return Math.min(b, Math.max(a, v)); }
   function arred(v){ var s = plano().passo; return Math.round(v / s) * s; }
-
   function limites(){
     var p = plano();
     if (S.mode === 'credito') return { min:p.min, max:p.max, passo:p.passo };
     return { min:Math.ceil(parcelaDe(p.min)*REDUCAO/10)*10, max:Math.floor(parcelaDe(p.max)*REDUCAO/10)*10, passo:10 };
   }
-
   function montarPrazos(){
     var box = $('sim-prazos'); box.innerHTML = '';
     plano().prazos.forEach(function(m){
@@ -664,15 +547,13 @@
       b.type = 'button'; b.className = 'chip'; b.textContent = m + ' meses';
       b.setAttribute('aria-pressed', m === S.prazo ? 'true' : 'false');
       b.onclick = function(){
-        var parcelaAtual = parcelaDe(S.credito);
-        S.prazo = m;
-        if (S.mode === 'parcela') S.credito = clamp(arred(creditoDe(parcelaAtual)), plano().min, plano().max);
+        var atual = parcelaDe(S.credito); S.prazo = m;
+        if (S.mode === 'parcela') S.credito = clamp(arred(creditoDe(atual)), plano().min, plano().max);
         montarPrazos(); sincronizar();
       };
       box.appendChild(b);
     });
   }
-
   function sincronizar(){
     var L = limites(), r = $('sim-range');
     var valor = S.mode === 'credito' ? S.credito : Math.round(parcelaDe(S.credito) * REDUCAO);
@@ -680,65 +561,44 @@
     $('sim-min').textContent = brl(L.min); $('sim-max').textContent = brl(L.max);
     $('sim-valor-lbl').textContent = S.mode === 'credito' ? 'Valor do crédito' : 'Parcela que cabe no seu bolso';
     if (document.activeElement !== $('sim-valor')) $('sim-valor').value = num(valor);
-    montarContem();
-    calcular();
+    montarContem(); calcular();
   }
-
   var ultimo = '';
   function calcular(){
     var p = plano(), n = S.prazo;
-    var cheia = parcelaDe(S.credito);          // parcela cheia (plano comum)
-    var reduzida = cheia * REDUCAO;             // o que o cliente paga até a contemplação
-    var sobra = cheia - reduzida;
-    var big = $('out-big');
-
+    var cheia = parcelaDe(S.credito), reduzida = cheia * REDUCAO, sobra = cheia - reduzida;
+    $('slip-cat').textContent = p.rot;
     if (S.mode === 'credito'){
-      $('out-titulo').textContent = 'Com a Singular';
-      big.innerHTML = brl(reduzida, true) + ' <small>/mês</small>';
-      $('out-sub').textContent = 'até a contemplação';
-      $('cmp-a-l').textContent = 'Plano comum'; $('cmp-b-l').textContent = 'Singular';
-      $('out-cheia').textContent = brl(cheia, true); $('out-cheia').className = 'strike';
-      $('cmp-b-n').textContent = brl(reduzida, true);
-      $('cmp-a').style.width = '100%'; $('cmp-b').style.width = (REDUCAO*100) + '%';
+      $('out-titulo').textContent = 'Sua parcela';
+      $('out-big').innerHTML = brl(reduzida, true);
+      $('out-cheia-sub').textContent = 'Parcela no plano comum';
+      $('out-cheia').innerHTML = '<s>' + brl(cheia, true) + '</s>';
       $('out-save').innerHTML = 'Sobra <strong>' + brl(sobra, true) + '</strong> no seu bolso todo mês até a carta sair.';
     } else {
-      var creditoComum = arred(creditoDe(reduzida));
-      $('out-titulo').textContent = 'Com ' + brl(reduzida) + '/mês você leva';
-      big.innerHTML = brl(S.credito);
-      $('out-sub').textContent = 'de crédito para comprar';
-      $('cmp-a-l').textContent = 'Crédito no plano comum'; $('cmp-b-l').textContent = 'Crédito na Singular';
-      $('out-cheia').textContent = brl(creditoComum); $('out-cheia').className = '';
-      $('cmp-b-n').textContent = brl(S.credito);
-      $('cmp-a').style.width = (creditoComum / S.credito * 100) + '%'; $('cmp-b').style.width = '100%';
-      $('out-save').innerHTML = 'Mesma parcela, <strong>o dobro de crédito</strong>. Esse é o poder da parcela reduzida.';
+      var comum = arred(creditoDe(reduzida));
+      $('out-titulo').textContent = 'Seu crédito';
+      $('out-big').innerHTML = brl(S.credito);
+      $('out-cheia-sub').textContent = 'Crédito no plano comum, mesma parcela';
+      $('out-cheia').innerHTML = '<s>' + brl(comum) + '</s>';
+      $('out-save').innerHTML = 'Com ' + brl(reduzida, true) + ' por mês, você leva <strong>o dobro de crédito</strong>.';
     }
-    if (big.textContent !== ultimo && !semMov){
-      big.classList.remove('tick'); void big.offsetWidth; big.classList.add('tick');
-    }
-    ultimo = big.textContent;
+    var txt = $('out-big').textContent;
+    if (txt !== ultimo && !semMov){ var st = $('stamp'); st.classList.remove('thump'); void st.offsetWidth; st.classList.add('thump'); }
+    ultimo = txt;
     $('out-credito').textContent = brl(S.credito);
     $('out-prazo').textContent = n + ' meses';
-    $('out-taxa').textContent = pct(p.taxa) + ' no total';
-
-    // Depois da contemplação: o saldo que falta é dividido pelas parcelas restantes
-    var k = S.contem;
-    var depois = (cheia * n - reduzida * k) / (n - k);
+    $('out-taxa').textContent = pct(p.taxa);
+    var k = S.contem, depois = (cheia * n - reduzida * k) / (n - k);
     $('out-depois').innerHTML = 'Se sair no mês ' + k + ', você paga <strong>' + brl(reduzida, true) + '</strong> até lá e depois <strong>' + brl(depois, true) + '</strong> por mês, já com o bem na mão.';
-
     var msg = 'Olá! Quero pagar metade da parcela até a contemplação. Minha simulação no site da Singular Invest:\n' +
-      '• Consórcio de ' + p.nome + '\n' +
-      '• Crédito: ' + brl(S.credito) + '\n' +
-      '• Prazo: ' + n + ' meses\n' +
-      '• Parcela reduzida: ' + brl(reduzida, true) + ' (cheia: ' + brl(cheia, true) + ')\n' +
-      'Quero garantir esse plano.';
+      '• Consórcio de ' + p.nome + '\n• Crédito: ' + brl(S.credito) + '\n• Prazo: ' + n + ' meses\n' +
+      '• Parcela reduzida: ' + brl(reduzida, true) + ' (cheia: ' + brl(cheia, true) + ')\nQuero garantir esse plano.';
     $('sim-wa').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
   }
-
   function aplicarValor(v){
     if (S.mode === 'credito') S.credito = clamp(arred(v), plano().min, plano().max);
     else S.credito = clamp(arred(creditoDe(v / REDUCAO)), plano().min, plano().max);
   }
-
   function montarContem(){
     var box = $('sim-contem'); box.innerHTML = '';
     var meses = MESES_EXEMPLO.filter(function(m){ return m < S.prazo; });
@@ -751,45 +611,28 @@
       box.appendChild(b);
     });
   }
-
   function escolherCat(cat){
-    S.cat = cat;
-    var p = plano(); S.credito = p.inicial; S.prazo = p.prazos[Math.min(1, p.prazos.length - 1)];
-    each(document.querySelectorAll('#sim-tabs .tab'), function(x){ x.setAttribute('aria-pressed', x.dataset.cat === cat ? 'true' : 'false'); });
+    S.cat = cat; var p = plano(); S.credito = p.inicial; S.prazo = p.prazos[Math.min(1, p.prazos.length - 1)];
+    each(document.querySelectorAll('#sim-tabs button'), function(x){ x.setAttribute('aria-pressed', x.dataset.cat === cat ? 'true' : 'false'); });
     montarPrazos(); sincronizar();
   }
-  each(document.querySelectorAll('#sim-tabs .tab'), function(t){
-    t.onclick = function(){ escolherCat(t.dataset.cat); };
-  });
-  // cartões "O que dá pra comprar" já abrem o simulador no tipo certo
-  each(document.querySelectorAll('.cat[data-cat]'), function(c){
-    c.addEventListener('click', function(){ escolherCat(c.dataset.cat); });
-  });
+  each(document.querySelectorAll('#sim-tabs button'), function(t){ t.onclick = function(){ escolherCat(t.dataset.cat); }; });
+  each(document.querySelectorAll('.row[data-cat]'), function(r){ r.addEventListener('click', function(){ escolherCat(r.dataset.cat); }); });
   each(document.querySelectorAll('#sim-mode button'), function(b){
     b.onclick = function(){
       S.mode = b.dataset.mode;
-      $('sim-mode').setAttribute('data-active', S.mode);
       each(document.querySelectorAll('#sim-mode button'), function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
       sincronizar();
     };
   });
   $('sim-range').oninput = function(){ aplicarValor(+this.value); $('sim-valor').value = num(+this.value); calcular(); };
-  // Não reescreve o campo enquanto a pessoa digita (no celular isso embaralha os números).
-  $('sim-valor').oninput = function(){
-    var d = this.value.replace(/\D/g, '');
-    if (d){ aplicarValor(+d); $('sim-range').value = +d; calcular(); }
-  };
+  $('sim-valor').oninput = function(){ var d = this.value.replace(/\D/g, ''); if (d){ aplicarValor(+d); $('sim-range').value = +d; calcular(); } };
   $('sim-valor').onfocus = function(){ this.value = this.value.replace(/\D/g, ''); };
   $('sim-valor').onblur = function(){ sincronizar(); };
   $('sim-valor').onchange = function(){ sincronizar(); };
   $('sim-valor').onkeydown = function(e){ if (e.key === 'Enter') this.blur(); };
-
-  try {
-    montarPrazos(); sincronizar();
-  } catch (e) {
-    $('out-big').textContent = 'Fale com a gente';
-    $('out-vs').textContent = 'Não deu para calcular aqui. Toque no botão e a gente simula para você no WhatsApp.';
-  }
+  try { montarPrazos(); sincronizar(); }
+  catch (e) { $('out-big').textContent = 'Fale com a gente'; $('out-vs').textContent = 'Não deu para calcular aqui. Toque no botão e a gente simula para você no WhatsApp.'; }
 </script>
 </body>
 </html>
